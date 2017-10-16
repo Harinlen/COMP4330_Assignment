@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\generator.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\generator.gpr</vfs_project>
+      <vfs_file>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\Sources\generator.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11" >
+      <vfs_project>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\generator.gpr</vfs_project>
+      <vfs_file>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\Sources\generator.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\generator.gpr</vfs_project>
+      <vfs_file>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\Sources\generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 40" line=" 10" >
+      <vfs_project>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\generator.gpr</vfs_project>
+      <vfs_file>C:\Users\admin-u5870682\Documents\Projects\COMP4330Assi1\Sources\generator_controllers.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
