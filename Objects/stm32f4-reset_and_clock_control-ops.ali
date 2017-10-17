@@ -1,7 +1,7 @@
 V "GNAT Lib v2017"
 A -O2
 A -gnatA
-A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A --RTS=C:\gnat\2017\arm-eabi\lib\gnat\ravenscar-sfp-stm32f4\
 A -mlittle-endian
 A -mfloat-abi=hard
 A -mcpu=cortex-m4
@@ -65,17 +65,17 @@ W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-genera
 W stm32f4.reset_and_clock_control%s  stm32f4-reset_and_clock_control.ads  stm32f4-reset_and_clock_control.ali
 W stm32f4.timers%s	stm32f4-timers.ads	stm32f4-timers.ali
 
-D interfac.ads		20170517144320 5ab55268 interfaces%s
-D stm32f4.ads		20151004221802 851d0fef stm32f4%s
-D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
-D stm32f4-reset_and_clock_control.ads  20151004222708 cd9e8e6c stm32f4.reset_and_clock_control%s
-D stm32f4-reset_and_clock_control-ops.ads  20151023162437 1e816f9e stm32f4.reset_and_clock_control.ops%s
-D stm32f4-reset_and_clock_control-ops.adb  20151023162437 8f04ff92 stm32f4.reset_and_clock_control.ops%b
-D stm32f4-timers.ads	20150926112245 dc9b3fca stm32f4.timers%s
-D system.ads		20170517144320 66e59cc5 system%s
-D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
-D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
-D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+D interfac.ads		20170517220732 5ab55268 interfaces%s
+D stm32f4.ads		20171017050350 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20171017050350 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-reset_and_clock_control.ads  20171017050350 cd9e8e6c stm32f4.reset_and_clock_control%s
+D stm32f4-reset_and_clock_control-ops.ads  20171017050350 1e816f9e stm32f4.reset_and_clock_control.ops%s
+D stm32f4-reset_and_clock_control-ops.adb  20171017050350 8f04ff92 stm32f4.reset_and_clock_control.ops%b
+D stm32f4-timers.ads	20171017050350 dc9b3fca stm32f4.timers%s
+D system.ads		20170517220734 66e59cc5 system%s
+D s-stoele.ads		20170517220732 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20170517220732 34867c83 system.unsigned_types%s
+D c:\users\u6013763\documents\comp4330assi1\gnat.adc  20171017050350 00000000
 X 2 stm32f4.ads
 9K9*STM32F4 244e12 5|5r6 5r39 6r6 6r39 10r9 100r5 6|5r14 375r5
 64E9*Enabler 64e52 6|7r66 53r76 191r57 207r67 273r53 294r63

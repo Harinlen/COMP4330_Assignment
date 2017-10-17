@@ -1,7 +1,7 @@
 V "GNAT Lib v2017"
 A -O2
 A -gnatA
-A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A --RTS=C:\gnat\2017\arm-eabi\lib\gnat\ravenscar-sfp-stm32f4\
 A -mlittle-endian
 A -mfloat-abi=hard
 A -mcpu=cortex-m4
@@ -57,9 +57,9 @@ RV SPARK_05
 
 U anu_base_board%s	anu_base_board.ads	bf07bf5d NE OO PK
 
-D anu_base_board.ads	20150918154836 bf07bf5d anu_base_board%s
-D system.ads		20170517144320 66e59cc5 system%s
-D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+D anu_base_board.ads	20171017050350 bf07bf5d anu_base_board%s
+D system.ads		20170517220734 66e59cc5 system%s
+D c:\users\u6013763\documents\comp4330assi1\gnat.adc  20171017050350 00000000
 X 1 anu_base_board.ads
 5K9*ANU_Base_Board 34l5 34e19
 7I9*Com_Ports<short_short_integer> 25r14 30r19

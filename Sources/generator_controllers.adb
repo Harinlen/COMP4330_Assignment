@@ -4,6 +4,7 @@
 
 with Ada.Interrupts.Names;                        use Ada.Interrupts.Names;
 with Ada.Real_Time;                               use Ada.Real_Time;
+with Ada.Synchronous_Task_Control;                use Ada.Synchronous_Task_Control;
 with ANU_Base_Board;                              use ANU_Base_Board;
 with ANU_Base_Board.Config;                       use ANU_Base_Board.Config;
 with ANU_Base_Board.Com_Interface;                use ANU_Base_Board.Com_Interface;
@@ -26,7 +27,7 @@ with System;                                      use System;
 package body Generator_Controllers is
 
    -- Parameters about the sine wave.
-   Signal_Frequency : constant Integer := 1;
+   Signal_Frequency : constant Integer := 2;
    Sample_Frequency : constant Integer := 16;
 
    -- Constants.
@@ -49,9 +50,10 @@ package body Generator_Controllers is
 
    -- Signal parameters.
    System_Start : constant Time := Clock;
-   Sine_Single_Period_Value : Integer := 1000 / Signal_Frequency;
+   Sine_Single_Period_Value : constant Integer := 1000 / Signal_Frequency;
    Sine_Single_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value);
    Calc_Signal_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value / Sample_Frequency);
+   Sine_Cycle_Start : Time := System_Start;
 
    -- Sine calcuation.
    function Sine_Level (Base_X : Float; X_Square : Float; Level : Sine_Taylor_Level) return Float is
@@ -75,53 +77,66 @@ package body Generator_Controllers is
                                   Level => Sine_Taylor_Level'First);
    end Sine;
 
+   Com_Ports_Semaphore : array (Com_Ports) of Suspension_Object;
+   Com_Ports_Up : array (Com_Ports) of Time;
+
    LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
 
    protected Com_Port_Reader with Interrupt_Priority => Interrupt_Priority'Last is
-      procedure Initialized;
    private
-      procedure Com_Port_Interrupt_Handler with Attach_Handler => EXTI9_5_Interrupt;
-      -- pragma Attach_Handler (Com_Port_Reader.Com_Port_Interrupt_Handler, EXTI9_5_Interrupt);
-      pragma Unreferenced (Com_Port_Interrupt_Handler);
+      procedure Interrupt_Handler with Attach_Handler => EXTI9_5_Interrupt;
+      pragma Unreferenced (Interrupt_Handler);
    end Com_Port_Reader;
 
    protected body Com_Port_Reader is
-      procedure Initialized is
+      procedure Interrupt_Handler is
+         Com_Port_Pin : Port_Pin;
       begin
          for Port in Com_Ports loop
-            -- Get the port wire data.
-            declare
-               Port_Wire : constant Port_Pin := Com_Wires (Port, Rx, Da);
-            begin
-               Enable (System_Configuration_Contr);
-               Set_Interrupt_Source (Interrupt_No => External_Interrupt_No (Port_Wire.Pin),
-                                     Port => Port_Wire.Port);
-
-               Set_Trigger (Line    => Port_Wire.Pin,
-                            Raising => Enable,
-                            Falling => Disable);
-               Masking (Line => Port_Wire.Pin,
-                        State => Unmasked);
-            end;
+            Com_Port_Pin := Com_Wires (Port, Rx, Da);
+            if Happened (Com_Port_Pin.Pin) then
+               Clear_Interrupt (Line => Com_Port_Pin.Pin);
+               Set_True        (S => Com_Ports_Semaphore (Port));
+            end if;
          end loop;
-      end Initialized;
-
-      procedure Com_Port_Interrupt_Handler is
-      begin
-         for Port in Com_Ports loop
-            declare
-               Port_Wire : constant Port_Pin := Com_Wires (Port, Rx, Da);
-            begin
-               if Happened (Port_Wire.Pin) then
-                  Clear_Interrupt (Port_Wire.Pin);
-                  On ((Port, L));
-               else
-                  Off ((Port, L));
-               end if;
-            end;
-         end loop;
-      end Com_Port_Interrupt_Handler;
+      end Interrupt_Handler;
    end Com_Port_Reader;
+
+   procedure Com_Port_Check (Com_Port_Id : Com_Ports) is
+   begin
+      -- Wait for the first signal.
+      Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
+      -- Toggle.
+      Toggle (LED_Pattern (Com_Port_Id));
+      -- Save the time.
+      Com_Ports_Up (Com_Port_Id) := Clock;
+   end Com_Port_Check;
+
+   task Com_Port_Checker_One with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Checker_One is
+      Com_Port_Id : constant Com_Ports := 1;
+   begin
+      loop
+         -- Check the com port.
+         Com_Port_Check (Com_Port_Id);
+      end loop;
+   end Com_Port_Checker_One;
+
+   task Com_Port_Checker_Two with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Checker_Two is
+      Com_Port_Id : constant Com_Ports := 2;
+   begin
+      loop
+         -- Check the com port.
+         Com_Port_Check (Com_Port_Id);
+      end loop;
+   end Com_Port_Checker_Two;
 
    task Signal_Generator with
      Storage_Size => 4 * 1024,
@@ -136,6 +151,8 @@ package body Generator_Controllers is
       loop
          -- Reset the sine x.
          Sine_X := 0.0;
+         -- Set the Cycle start time.
+         Sine_Cycle_Start := Clock;
          for Detect_Time in Sample_Range loop
             Next_Sample_Start := Next_Sample_Start + Calc_Signal_Period;
             -- Calculate the sample.
@@ -147,7 +164,6 @@ package body Generator_Controllers is
                   Reset  (Port);
                   Off ((Port, R));
                end loop;
-
             else
                for Port in Com_Ports'First .. Com_Ports'Last loop
                   Set  (Port);
@@ -163,5 +179,22 @@ package body Generator_Controllers is
          Next_Sine_Start := System_Start + Sine_Single_Period;
       end loop;
    end Signal_Generator;
-
+begin
+   -- Initialized the com ports with the interruptions.
+   declare
+      Com_Port_Pin : Port_Pin;
+   begin
+      for Port in Com_Ports loop
+         -- Get the port wire data.
+         Com_Port_Pin := Com_Wires (Port, Rx, Da);
+         Enable (System_Configuration_Contr);
+         Set_Interrupt_Source (Interrupt_No => External_Interrupt_No (Com_Port_Pin.Pin),
+                               Port => Com_Port_Pin.Port);
+         Set_Trigger (Line    => Com_Port_Pin.Pin,
+                      Raising => Enable,
+                      Falling => Disable);
+         Masking (Line => Com_Port_Pin.Pin,
+                  State => Unmasked);
+      end loop;
+   end;
 end Generator_Controllers;

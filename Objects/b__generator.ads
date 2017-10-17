@@ -96,6 +96,8 @@ package ada_main is
    --  system.tasking.restricted.stages%b
    --  ada.task_identification%s
    --  ada.task_identification%b
+   --  ada.synchronous_task_control%s
+   --  ada.synchronous_task_control%b
    --  system.interrupts%s
    --  system.interrupts%b
    --  ada.interrupts%s

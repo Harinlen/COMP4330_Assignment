@@ -11,15 +11,15 @@ package body ada_main is
    E102 : Short_Integer; pragma Import (Ada, E102, "system__tasking__protected_objects__multiprocessors_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "system__tasking__restricted__stages_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "stm32f4__general_purpose_ios__ops_E");
-   E110 : Short_Integer; pragma Import (Ada, E110, "stm32f4__interrupts_and_events__ops_E");
-   E116 : Short_Integer; pragma Import (Ada, E116, "stm32f4__random_number_generator__ops_E");
-   E113 : Short_Integer; pragma Import (Ada, E113, "stm32f4__system_configuration_controller__ops_E");
+   E112 : Short_Integer; pragma Import (Ada, E112, "stm32f4__interrupts_and_events__ops_E");
+   E118 : Short_Integer; pragma Import (Ada, E118, "stm32f4__random_number_generator__ops_E");
+   E115 : Short_Integer; pragma Import (Ada, E115, "stm32f4__system_configuration_controller__ops_E");
    E082 : Short_Integer; pragma Import (Ada, E082, "stm32f4__reset_and_clock_control__ops_E");
-   E107 : Short_Integer; pragma Import (Ada, E107, "discovery_board__button_E");
+   E109 : Short_Integer; pragma Import (Ada, E109, "discovery_board__button_E");
    E073 : Short_Integer; pragma Import (Ada, E073, "led_handling_E");
    E086 : Short_Integer; pragma Import (Ada, E086, "discovery_board__led_interface_E");
-   E119 : Short_Integer; pragma Import (Ada, E119, "last_chance_handler_E");
-   E105 : Short_Integer; pragma Import (Ada, E105, "anu_base_board__com_interface_E");
+   E121 : Short_Integer; pragma Import (Ada, E121, "last_chance_handler_E");
+   E107 : Short_Integer; pragma Import (Ada, E107, "anu_base_board__com_interface_E");
    E067 : Short_Integer; pragma Import (Ada, E067, "anu_base_board__led_interface_E");
    E089 : Short_Integer; pragma Import (Ada, E089, "generator_controllers_E");
 
@@ -53,18 +53,18 @@ package body ada_main is
       E096 := E096 + 1;
       STM32F4.GENERAL_PURPOSE_IOS.OPS'ELAB_SPEC;
       E075 := E075 + 1;
-      E110 := E110 + 1;
-      E116 := E116 + 1;
-      E113 := E113 + 1;
+      E112 := E112 + 1;
+      E118 := E118 + 1;
+      E115 := E115 + 1;
       E082 := E082 + 1;
       Discovery_Board.Button'Elab_Body;
-      E107 := E107 + 1;
+      E109 := E109 + 1;
       E073 := E073 + 1;
       Discovery_Board.Led_Interface'Elab_Body;
       E086 := E086 + 1;
-      E119 := E119 + 1;
+      E121 := E121 + 1;
       Anu_Base_Board.Com_Interface'Elab_Body;
-      E105 := E105 + 1;
+      E107 := E107 + 1;
       Anu_Base_Board.Led_Interface'Elab_Body;
       E067 := E067 + 1;
       Generator_Controllers'Elab_Body;
@@ -87,34 +87,34 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/anu_base_board.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/discovery_board.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-general_purpose_ios.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/discovery_board-config.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-general_purpose_ios-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-interrupts_and_events.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-interrupts_and_events-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-random_number_generator.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-random_number_generator-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-reset_and_clock_control.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-system_configuration_controller.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-system_configuration_controller-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-timers.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-reset_and_clock_control-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/discovery_board-button.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/led_handling.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/discovery_board-led_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/last_chance_handler.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/stm32f4-usart.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/anu_base_board-config.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/anu_base_board-com_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/anu_base_board-led_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/generator_controllers.o
-   --   /students/u5870415/COMP4330/Generator/Generator/Objects/generator.o
-   --   -L/students/u5870415/COMP4330/Generator/Generator/Objects/
-   --   -L/students/u5870415/COMP4330/Generator/Generator/Objects/
-   --   -L/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/adalib/
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\anu_base_board.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\discovery_board.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-general_purpose_ios.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\discovery_board-config.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-general_purpose_ios-ops.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-interrupts_and_events.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-interrupts_and_events-ops.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-random_number_generator.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-random_number_generator-ops.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-reset_and_clock_control.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-system_configuration_controller.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-system_configuration_controller-ops.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-timers.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-reset_and_clock_control-ops.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\discovery_board-button.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\led_handling.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\discovery_board-led_interface.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\last_chance_handler.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\stm32f4-usart.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\anu_base_board-config.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\anu_base_board-com_interface.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\anu_base_board-led_interface.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\generator_controllers.o
+   --   C:\Users\u6013763\Documents\COMP4330Assi1\Objects\generator.o
+   --   -LC:\Users\u6013763\Documents\COMP4330Assi1\Objects\
+   --   -LC:\Users\u6013763\Documents\COMP4330Assi1\Objects\
+   --   -LC:\gnat\2017\arm-eabi\lib\gnat\ravenscar-sfp-stm32f4\adalib\
    --   -static
    --   -lgnarl
    --   -lgnat
