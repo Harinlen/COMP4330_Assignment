@@ -86,7 +86,10 @@ package body Generator_Controllers is
 
    protected Com_Port_Reader with Interrupt_Priority => Interrupt_Priority'Last is
    private
-      procedure Interrupt_Handler with Attach_Handler => EXTI9_5_Interrupt;
+      procedure Interrupt_Handler;
+      pragma Attach_Handler (Interrupt_Handler, EXTI9_5_Interrupt);
+      pragma Attach_Handler (Interrupt_Handler, EXTI15_10_Interrupt);
+      pragma Attach_Handler (Interrupt_Handler, EXTI2_Interrupt);
       pragma Unreferenced (Interrupt_Handler);
    end Com_Port_Reader;
 
@@ -110,7 +113,7 @@ package body Generator_Controllers is
       -- Wait for the first signal.
       Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
       -- Toggle.
-      Toggle ((Com_Port_Id, L));
+      On ((Com_Port_Id, L));
       -- Calculate the arrived period time.
       Arrived_Cycle_Time := Clock - Current_Cycle_Start;
       -- Update the offset time.
@@ -143,6 +146,30 @@ package body Generator_Controllers is
          Com_Port_Check (2);
       end loop;
    end Com_Port_Checker_Two;
+
+   task Com_Port_Checker_Three with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Checker_Three is
+   begin
+      loop
+         -- Check the com port.
+         Com_Port_Check (3);
+      end loop;
+   end Com_Port_Checker_Three;
+
+   task Com_Port_Checker_Four with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Checker_Four is
+   begin
+      loop
+         -- Check the com port.
+         Com_Port_Check (4);
+      end loop;
+   end Com_Port_Checker_Four;
 
    task Signal_Generator with
      Storage_Size => 4 * 1024,
