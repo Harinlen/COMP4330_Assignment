@@ -1,0 +1,164 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB LC TF  ES ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U anu_base_board.led_interface%b  anu_base_board-led_interface.adb  0d61190e OO PK
+W anu_base_board%s	anu_base_board.ads	anu_base_board.ali
+W anu_base_board.config%s  anu_base_board-config.ads  anu_base_board-config.ali
+W interfaces%s		interfac.ads		interfac.ali
+W led_handling%s	led_handling.adb	led_handling.ali  AD
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W stm32f4.general_purpose_ios.ops%s  stm32f4-general_purpose_ios-ops.adb  stm32f4-general_purpose_ios-ops.ali  AD
+
+U anu_base_board.led_interface%s  anu_base_board-led_interface.ads  89d9c4f7 BN EB EE NE OO PK
+W anu_base_board%s	anu_base_board.ads	anu_base_board.ali
+
+D ada.ads		20170517144320 76789da1 ada%s
+D a-unccon.ads		20170517144320 31484697 ada.unchecked_conversion%s
+D anu_base_board.ads	20150918154836 bf07bf5d anu_base_board%s
+D anu_base_board-config.ads  20150921185821 27e8d7a2 anu_base_board.config%s
+D anu_base_board-led_interface.ads  20151023162436 36de7baa anu_base_board.led_interface%s
+D anu_base_board-led_interface.adb  20150925121638 852cf21e anu_base_board.led_interface%b
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D i-stm32.ads		20170517144320 4d2e1e9b interfaces.stm32%s
+D i-stm32-pwr.ads	20170517144320 10ed2a13 interfaces.stm32.pwr%s
+D i-stm32-rcc.ads	20170517144320 ed083a96 interfaces.stm32.rcc%s
+D led_handling.ads	20150921173120 8bf2f877 led_handling%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-general_purpose_ios-ops.ads  20151023162437 9c2ed444 stm32f4.general_purpose_ios.ops%s
+D stm32f4-general_purpose_ios-ops.adb  20151023162436 ff7cc6fa stm32f4.general_purpose_ios.ops%b
+D stm32f4-usart.ads	20151006004129 79219e0f stm32f4.usart%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-assert.ads		20170517144320 cd8d2c94 system.assertions%s
+D s-bb.ads		20170517144320 09e072ae system.bb%s
+D s-bbbopa.ads		20170517144320 95d97b26 system.bb.board_parameters%s
+D s-bbbosu.ads		20170517144320 9b59a61f system.bb.board_support%s
+D s-bbcppr.ads		20170517144320 bcfa73ad system.bb.cpu_primitives%s
+D s-bcprmu.ads		20170517144320 043d3736 system.bb.cpu_primitives.multiprocessors%s
+D s-bbinte.ads		20170517144320 d9fc23b0 system.bb.interrupts%s
+D s-bbmcpa.ads		20170517144320 c4c55388 system.bb.mcu_parameters%s
+D s-bbpara.ads		20170517144320 77379e7b system.bb.parameters%s
+D s-bbthre.ads		20170517144320 d6c36e4f system.bb.threads%s
+D s-bbthqu.ads		20170517144320 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20170517144320 ad086247 system.bb.time%s
+D s-multip.ads		20170517144320 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20170517144320 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20170517144320 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20170517144320 2d4f0621 system.os_interface%s
+D s-parame.ads		20170517144320 c9fe535f system.parameters%s
+D s-stm32.ads		20170517144320 e898dba2 system.stm32%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170517144320 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20170517144320 801abd01 system.task_info%s
+D s-taspri.ads		20170517144320 351848fa system.task_primitives%s
+D s-taskin.ads		20170517144320 2a4da085 system.tasking%s
+D s-taprob.ads		20170517144320 c8fc0753 system.tasking.protected_objects%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 3 anu_base_board.ads
+5K9*ANU_Base_Board 34e19 5|5r9 17r5 6|9r6 9r43 14r14 65r5
+7I9*Com_Ports<short_short_integer> 6|35r19 45r19 59r16
+9E9*Indicators 9e36 6|36r22 46r22 60r19
+24R9*LEDs 27e14 5|9r25 10r25 15r28 6|16r28 20r24 26r25 52r28
+25i7*Port{7I9} 6|18r23
+26e7*Side{9E9} 6|18r33
+X 4 anu_base_board-config.ads
+8K24*Config 48e26 6|9w21 9r58
+10a4*LED_Wires(13|28R9) 6|18r8 61r22
+X 5 anu_base_board-led_interface.ads
+5K24*LED_Interface 3|5k9 5|17l20 17e33 6|14b29 65l20 65t33
+9U14*On 9>19 6|20b14 24l8 24t10 37s13
+9r19 LED{3|24R9} 6|20b18 23r21
+10U14*Off 10>19 6|26b14 30l8 30t11 47s13
+10r19 LED{3|24R9} 6|26b19 29r23
+12U14*All_Off 6|42b14 50l8 50t15 64s4
+13U14*All_On 6|32b14 40l8 40t14
+15U14*Toggle 15>22 6|52b14 56l8 56t14
+15r22 LED{3|24R9} 6|52b22 55r38
+X 6 anu_base_board-led_interface.adb
+16V13 To_Wire{13|28R9} 16>22 23s12 29s14 55s29
+16r22 LED{3|24R9} 18r19 18r29
+35i11 Port{3|7I9} 37r18
+36e14 Side{3|9E9} 37r24
+45i11 Port{3|7I9} 47r19
+46e14 Side{3|9E9} 47r25
+59i8 Port{3|7I9} 61r33
+60e11 Side{3|9E9} 61r39
+X 11 led_handling.ads
+7K9*LED_Handling 6|10w6 10r43 11|12e17
+9U14*Initialize 6|61s10
+X 12 stm32f4.ads
+9K9*STM32F4 6|11r6 11r43 12r6 12r43 12|244e12
+X 13 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 6|11w14 11r51 12r14 12r51 13|237e32
+28R9*Port_Pin 6|16r41 13|31e14
+X 14 stm32f4-general_purpose_ios-ops.ads
+7K37*Ops 6|12w34 12r71 14|60e36
+11U14*Set 6|23s7
+14U14*Reset 6|29s7
+24w14*Atomic_Switch 6|55r7
+25U17 Toggle 6|55s21
+X 17 system.ads
+95M9*Address
+X 23 s-bcprmu.ads
+39U14*Start_All_CPUs 40i<c,__gnat_start_slave_cpus>22
+X 40 s-taskin.ads
+361V13*Get_Sec_Stack{17|95M9} 362i<c,__gnat_get_secondary_stack>22
+

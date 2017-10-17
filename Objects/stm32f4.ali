@@ -1,0 +1,291 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB ES ZX
+
+RN
+RV NO_LONG_LONG_INTEGERS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32f4%s		stm32f4.ads		851d0fef NE OO PK IU
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 1 stm32f4.ads
+9K9*STM32F4 149E4 244l5 244e12
+14M9*Bit 60r52
+15M9*Bits_2
+16M9*Bits_3
+17M9*Bits_4
+18M9*Bits_5
+19M9*Bits_6
+20M9*Bits_7
+21M9*Bits_8 52r25
+22M9*Bits_9
+23M9*Bits_10
+24M9*Bits_11
+25M9*Bits_12
+26M9*Bits_13
+27M9*Bits_14
+28M9*Bits_15
+29M9*Bits_16 51r25
+30M9*Bits_17
+31M9*Bits_18
+32M9*Bits_19
+33M9*Bits_20
+34M9*Bits_21
+35M9*Bits_22
+36M9*Bits_23
+37M9*Bits_24
+38M9*Bits_25
+39M9*Bits_26
+40M9*Bits_27
+41M9*Bits_28
+42M9*Bits_29
+43M9*Bits_30
+44M9*Bits_31
+45M9*Bits_32 50r25
+46M9*Bits_64
+50M12*Word{45M9}
+51M12*Half_Word{29M9}
+52M12*Byte{21M9}
+56I12*Bit_Range{natural} 60r29 91r35 92r35 93r35 94r35 95r35 96r35 97r35
+. 98r35 99r35 100r35 101r35 102r35 103r35 104r35 105r35 106r35 107r35 108r35
+. 109r35 110r35 111r35 112r35 113r35 114r35 115r35 116r35
+60A9*Bit_Array(14M9)<integer>
+64E9*Enabler 64e52 91r58 120r8
+64n23*Disable{64E9} 120r23
+64n37*Enable{64E9} 120r42
+65E9*Disabler 65e52 92r58 121r8
+65n23*Enable{65E9} 121r23
+65n37*Disable{65E9} 121r42
+66E9*Switch 66e52 93r58 122r8
+66n23*Off{66E9} 122r23
+66n37*On{66E9} 122r42
+67E9*Readiness 67e52 94r58 123r8
+67n23*Not_Ready{67E9} 123r23
+67n37*Ready{67E9} 123r42
+68E9*Bypass 68e52 95r58 124r8
+68n23*Not_Bypassed{68E9} 124r23
+68n37*Bypassed{68E9} 124r42
+69E9*Lock 69e52 96r58 125r8
+69n23*Unlocked{69E9} 125r23
+69n37*Locked{69E9} 125r42
+70E9*Mask 70e52 97r58 126r8
+70n23*Masked{70E9} 126r23
+70n37*Unmasked{70E9} 126r42
+71E9*Event 71e52 98r58 127r8
+71n23*Clear{71E9} 127r23
+71n37*Trigger{71E9} 127r42
+72E9*Pending 72e52 99r58 128r8
+72n23*None{72E9} 128r23
+72n37*Occured_Clear{72E9} 128r42
+73E9*Direction 73e52 100r58 129r8
+73n23*Up{73E9} 129r23
+73n37*Down{73E9} 129r42
+74E9*Buffering 74e52 101r58 130r8
+74n23*Not_Buffered{74E9} 130r23
+74n37*Buffered{74E9} 130r42
+75E9*Inverter 75e52 102r58 131r8
+75n23*Not_Inverted{75E9} 131r23
+75n37*Inverted{75E9} 131r42
+76E9*Occurance 76e52 103r58 132r8
+76n23*Not_Occured{76E9} 132r23
+76n37*Occured{76E9} 132r42
+77E9*Generator 77e52 104r58 133r8
+77n23*No_Action{77E9} 133r23
+77n37*Generate{77E9} 133r42
+78E9*Polarity 78e52 105r58 134r8
+78n23*Active_Low{78E9} 134r23
+78n37*Active_High{78E9} 134r42
+79E9*Resetting 79e52 106r58 135r8
+79n23*Do_Nothing{79E9} 135r23
+79n37*Reset{79E9} 135r42
+80E9*Setting 80e52 107r58 136r8
+80n23*Do_Nothing{80E9} 136r23
+80n37*Set{80E9} 136r42
+81E9*Flagging 81e52 108r58 137r8
+81n23*No_Flag{81E9} 137r23
+81n37*Flag{81E9} 137r42
+82E9*Clearing 82e52 109r58 138r8
+82n23*Do_Nothing{82E9} 138r23
+82n37*Clear{82E9} 138r42
+83E9*Status 83e52 110r58 139r8
+83n23*Ok{83E9} 139r23
+83n37*Faulty{83E9} 139r42
+84E9*Detection 84e52 111r58 140r8
+84n23*Not_Detected{84E9} 140r23
+84n37*Detected{84E9} 140r42
+85E9*Sending 85e52 112r58 141r8
+85n23*Do_Nothing{85E9} 141r23
+85n37*Send{85E9} 141r42
+86E9*Muting 86e52 113r58 142r8
+86n23*Active{86E9} 142r23
+86n37*Muted{86E9} 142r42
+87E9*Parity 87e52 114r58 143r8
+87n23*Even{87E9} 143r23
+87n37*Odd{87E9} 143r42
+88E9*Completed 88e52 115r58 144r8
+88n23*Not_Complete{88E9} 144r23
+88n37*Complete{88E9} 144r42
+89E9*Starter 89e52 116r58 145r8
+89n23*Not_Started{89E9} 145r23
+89n37*Started{89E9} 145r42
+91A9*Enabler_Array(64E9)<integer>
+92A9*Disabler_Array(65E9)<integer>
+93A9*Switch_Array(66E9)<integer>
+94A9*Readiness_Array(67E9)<integer>
+95A9*Bypass_Array(68E9)<integer>
+96A9*Lock_Array(69E9)<integer>
+97A9*Mask_Array(70E9)<integer>
+98A9*Event_Array(71E9)<integer>
+99A9*Pending_Array(72E9)<integer>
+100A9*Direction_Array(73E9)<integer>
+101A9*Buffering_Array(74E9)<integer>
+102A9*Inverter_Array(75E9)<integer>
+103A9*Occurance_Array(76E9)<integer>
+104A9*Generator_Array(77E9)<integer>
+105A9*Polarity_Array(78E9)<integer>
+106A9*Resetting_Array(79E9)<integer>
+107A9*Setting_Array(80E9)<integer>
+108A9*Flagging_Array(81E9)<integer>
+109A9*Clearing_Array(82E9)<integer>
+110A9*Status_Array(83E9)<integer>
+111A9*Detection_Array(84E9)<integer>
+112A9*Sending_Array(85E9)<integer>
+113A9*Muting_Array(86E9)<integer>
+114A9*Parity_Array(87E9)<integer>
+115A9*Completed_Array(88E9)<integer>
+116A9*Starter_Array(89E9)<integer>
+149N4 Base_Peripheral 153r28 154r28 158r33 159r33 160r33 161r33
+153N4 Base_APB1 165r39 166r39 167r39 168r39 169r39 170r39 171r39 172r39 173r39
+. 174r39 175r39 176r39 177r39 178r39 179r39 180r39 181r39 182r39 183r39 184r39
+. 185r39 186r39 187r39 188r39 189r39 190r39 191r39
+154N4 Base_APB2 195r39 196r39 197r39 198r39 199r39 200r39 201r39 202r39 203r39
+. 204r39 205r39 206r39
+158N4 Base_AHB1 210r39 211r39 212r39 213r39 214r39 215r39 216r39 217r39 218r39
+. 219r39 220r39 221r39 222r39 223r39 224r39 225r39 226r39
+159N4 Base_AHB2 230r39 231r39 232r39 233r39 234r39
+160N4 Base_AHB3 238r39 239r39 240r39 241r39 242r39
+161N4 Base_Cortex_M4
+165N4 Base_TIM2
+166N4 Base_TIM3
+167N4 Base_TIM4
+168N4 Base_TIM5
+169N4 Base_TIM6
+170N4 Base_TIM7
+171N4 Base_TIM12
+172N4 Base_TIM13
+173N4 Base_TIM14
+174N4 Base_RTC_BKP
+175N4 Base_WWDG
+176N4 Base_IWDG
+177N4 Base_I2S2ext
+178N4 Base_SPI2_I2S2
+179N4 Base_SPI3_I2S3
+180N4 Base_I2S3ext
+181N4 Base_USART2
+182N4 Base_USART3
+183N4 Base_UART4
+184N4 Base_UART5
+185N4 Base_I2C1
+186N4 Base_I2C2
+187N4 Base_I2C3
+188N4 Base_CAN1
+189N4 Base_CAN2
+190N4 Base_PWR
+191N4 Base_DAC
+195N4 Base_TIM1
+196N4 Base_TIM8
+197N4 Base_USART1
+198N4 Base_USART6
+199N4 Base_ADC123
+200N4 Base_SDIO
+201N4 Base_SPI1
+202N4 Base_SYSCFG
+203N4 Base_EXTI
+204N4 Base_TIM9
+205N4 Base_TIM10
+206N4 Base_TIM11
+210N4 Base_GPIOA
+211N4 Base_GPIOB
+212N4 Base_GPIOC
+213N4 Base_GPIOD
+214N4 Base_GPIOE
+215N4 Base_GPIOF
+216N4 Base_GPIOG
+217N4 Base_GPIOH
+218N4 Base_GPIOI
+219N4 Base_CRC
+220N4 Base_RCC
+221N4 Base_FLASH
+222N4 Base_BKPSRAM
+223N4 Base_DMA1
+224N4 Base_DMA2
+225N4 Base_ETHERNET_MAC
+226N4 Base_USB_OTG_HS
+230N4 Base_USB_OTG_FS
+231N4 Base_DCMI
+232N4 Base_CRYP
+233N4 Base_HASH
+234N4 Base_RNG
+238N4 Base_FSMC_bank_1
+239N4 Base_FSMC_bank_2
+240N4 Base_FSMC_bank_3
+241N4 Base_FSMC_bank_4
+242N4 Base_FSMC_control
+

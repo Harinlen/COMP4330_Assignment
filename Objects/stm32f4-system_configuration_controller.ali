@@ -1,0 +1,151 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB ES ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32f4.system_configuration_controller%s  stm32f4-system_configuration_controller.ads  ca35fc1c NE OO PK IU
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-system_configuration_controller.ads  20150925124153 a76a041d stm32f4.system_configuration_controller%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 2 stm32f4.ads
+9K9*STM32F4 244e12 4|7r6 7r39 12r9 179r5
+20M9*Bits_7 4|138r20
+21M9*Bits_8 4|53r22
+29M9*Bits_16 4|69r18 87r18 105r18 123r18
+36M9*Bits_23 4|51r22 140r20
+43M9*Bits_30 4|37r18
+45M9*Bits_32
+46M9*Bits_64 4|159r18
+50M12*Word{45M9} 4|38r38 54r38 70r38 88r38 106r38 124r38 141r38
+52M12*Byte{21M9} 4|161r38
+64E9*Enabler 64e52 4|137r20
+67E9*Readiness 67e52 4|139r20
+202N4 Base_SYSCFG 4|177r46
+X 3 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 237e32 4|7w14 7r47
+15E12*GPIO_Ports 15e54 4|65r18 66r18 67r18 68r18 83r18 84r18 85r18 86r18
+. 101r18 102r18 103r18 104r18 119r18 120r18 121r18 122r18
+X 4 stm32f4-system_configuration_controller.ads
+12K17*System_configuration_controller 2|9k9 4|35E9 179l13 179e44
+16E9*MEM_MODE 19e37 30r8 36r18
+16n22*Main_Flash{16E9} 30r22
+17n22*System_Flash{16E9} 31r22
+18n22*FSMC_Bank1{16E9} 32r22
+19n22*Embedded_SRAM{16E9} 33r22
+23E9*MII_RMII_SEL_Options 24e54 47r8 52r22
+23n34*MII_interface{23E9} 47r34
+24n34*RMII_PHY_interface{23E9} 48r34
+35R9 SYSCFG_MEMRMP 38e15 40r8 153r18
+36e7*MEMRMP{16E9} 41r7
+37m7*Reserved{2|43M9} 42r7
+50R9 SYSCFG_PMC 54e15 56r8 154r18
+51m7*Reserved_1{2|36M9} 57r7
+52e7*MII_RMII_SEL{23E9} 58r7
+53m7*Reserved_2{2|21M9} 59r7
+64R9 SYSCFG_EXTICR1 70e15 72r8 155r18
+65e7*EXTI0{3|15E12} 73r7
+66e7*EXTI1{3|15E12} 74r7
+67e7*EXTI2{3|15E12} 75r7
+68e7*EXTI3{3|15E12} 76r7
+69m7*Reserved{2|29M9} 77r7
+82R9 SYSCFG_EXTICR2 88e15 90r8 156r18
+83e7*EXTI4{3|15E12} 91r7
+84e7*EXTI5{3|15E12} 92r7
+85e7*EXTI6{3|15E12} 93r7
+86e7*EXTI7{3|15E12} 94r7
+87m7*Reserved{2|29M9} 95r7
+100R9 SYSCFG_EXTICR3 106e15 108r8 157r18
+101e7*EXTI8{3|15E12} 109r7
+102e7*EXTI9{3|15E12} 110r7
+103e7*EXTI10{3|15E12} 111r7
+104e7*EXTI11{3|15E12} 112r7
+105m7*Reserved{2|29M9} 113r7
+118R9 SYSCFG_EXTICR4 124e15 126r8 158r18
+119e7*EXTI12{3|15E12} 127r7
+120e7*EXTI13{3|15E12} 128r7
+121e7*EXTI14{3|15E12} 129r7
+122e7*EXTI15{3|15E12} 130r7
+123m7*Reserved{2|29M9} 131r7
+136R9 SYSCFG_CMPCR 141e15 143r8 160r18
+137e7*CMP_PD{2|64E9} 144r7
+138m7*Reserved_1{2|20M9} 145r7
+139e7*READY{2|67E9} 146r7
+140m7*Reserved_2{2|36M9} 147r7
+152R9 SYSCFG_Register 161e15 163r8 176r13
+153r7*MEMRM{35R9} 164r7
+154r7*PMC{50R9} 165r7
+155r7*EXTICR1{64R9} 166r7
+156r7*EXTICR2{82R9} 167r7
+157r7*EXTICR3{100R9} 168r7
+158r7*EXTICR4{118R9} 169r7
+159m7*Reserved{2|46M9} 170r7
+160r7*CMPCR{136R9} 171r7
+176r4 SYSCFG{152R9}
+X 5 system.ads
+65K9*System 4|8w6 8r39 177r27 5|179e11
+95M9*Address 4|177r27
+

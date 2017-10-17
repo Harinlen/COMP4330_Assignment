@@ -1,0 +1,9 @@
+generator_controllers.adb:12:21: warning: no entities of "Discovery_Board.Button" are referenced
+generator_controllers.adb:13:21: warning: no entities of "Discovery_Board.Config" are referenced
+generator_controllers.adb:14:21: warning: no entities of "Discovery_Board.LED_Interface" are referenced
+generator_controllers.adb:18:33: warning: no entities of "STM32F4.General_purpose_IOs.Ops" are referenced
+generator_controllers.adb:22:37: warning: no entities of "STM32F4.Random_number_generator.Ops" are referenced
+generator_controllers.adb:52:04: warning: "Sine_Single_Period_Value" is not modified, could be declared constant
+generator_controllers.adb:78:04: warning: constant "LED_Pattern" is not referenced
+generator_controllers.adb:80:14: warning: variable "Com_Port_Reader" is not referenced
+generator_controllers.adb:81:17: warning: procedure "Initialized" is not referenced

@@ -1,0 +1,287 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB LC TF  ES ZX
+
+RN
+RV NO_PROTECTED_TYPES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32f4.general_purpose_ios.ops%b  stm32f4-general_purpose_ios-ops.adb  4e9158ba NE OO PK IU
+W interfaces%s		interfac.ads		interfac.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+U stm32f4.general_purpose_ios.ops%s  stm32f4-general_purpose_ios-ops.ads  1289bf6f BN EE OO PF PK IU
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20170517144320 76789da1 ada%s
+D a-unccon.ads		20170517144320 31484697 ada.unchecked_conversion%s
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D i-stm32.ads		20170517144320 4d2e1e9b interfaces.stm32%s
+D i-stm32-pwr.ads	20170517144320 10ed2a13 interfaces.stm32.pwr%s
+D i-stm32-rcc.ads	20170517144320 ed083a96 interfaces.stm32.rcc%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-general_purpose_ios-ops.ads  20151023162437 9c2ed444 stm32f4.general_purpose_ios.ops%s
+D stm32f4-general_purpose_ios-ops.adb  20151023162436 ff7cc6fa stm32f4.general_purpose_ios.ops%b
+D system.ads		20170517144320 66e59cc5 system%s
+D s-assert.ads		20170517144320 cd8d2c94 system.assertions%s
+D s-bb.ads		20170517144320 09e072ae system.bb%s
+D s-bbbopa.ads		20170517144320 95d97b26 system.bb.board_parameters%s
+D s-bbbosu.ads		20170517144320 9b59a61f system.bb.board_support%s
+D s-bbcppr.ads		20170517144320 bcfa73ad system.bb.cpu_primitives%s
+D s-bcprmu.ads		20170517144320 043d3736 system.bb.cpu_primitives.multiprocessors%s
+D s-bbinte.ads		20170517144320 d9fc23b0 system.bb.interrupts%s
+D s-bbmcpa.ads		20170517144320 c4c55388 system.bb.mcu_parameters%s
+D s-bbpara.ads		20170517144320 77379e7b system.bb.parameters%s
+D s-bbthre.ads		20170517144320 d6c36e4f system.bb.threads%s
+D s-bbthqu.ads		20170517144320 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20170517144320 ad086247 system.bb.time%s
+D s-multip.ads		20170517144320 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20170517144320 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20170517144320 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20170517144320 2d4f0621 system.os_interface%s
+D s-parame.ads		20170517144320 c9fe535f system.parameters%s
+D s-stm32.ads		20170517144320 e898dba2 system.stm32%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170517144320 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20170517144320 801abd01 system.task_info%s
+D s-taspri.ads		20170517144320 351848fa system.task_primitives%s
+D s-taskin.ads		20170517144320 2a4da085 system.tasking%s
+D s-taprob.ads		20170517144320 c8fc0753 system.tasking.protected_objects%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 7 stm32f4.ads
+9K9*STM32F4 244e12 9|7r9 60r5 10|6r14 192r5
+14M9*Bit 9|19r53 21r50 22r50 10|57r53 63r50 67r50
+28M9*Bits_15
+45M9*Bits_32 9|58r67 10|178r67 181r20 182r20 183r20 184r20 185r20 186r20
+. 187r20 188r20 189r20
+60A9*Bit_Array(14M9)<integer>
+69n23*Unlocked{69E9} 10|165r64 172r33
+69n37*Locked{69E9} 10|97r60 166r53 170r47 174r33
+80n23*Do_Nothing{80E9} 10|16r61 33r63 44r63 45r63
+80n37*Set{80E9} 10|11r52 20r31 28r54 37r33 49r42 52r44
+96A9*Lock_Array(69E9)<integer>
+107A9*Setting_Array(80E9)<integer> 10|16r21 33r23
+X 8 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 7|9k9 8|237e32 9|7r17 60r13 10|6r22 192r13
+15E12*GPIO_Ports 15e54 9|12r28 15r28 17r32 58r48 10|14r26 31r28 42r32 178r48
+15n27*A{15E12} 10|181r15
+15n30*B{15E12} 10|182r15
+15n33*C{15E12} 10|183r15
+15n36*D{15E12} 10|184r15
+15n39*E{15E12} 10|185r15
+15n42*F{15E12} 10|186r15
+15n45*G{15E12} 10|187r15
+15n48*H{15E12} 10|188r15
+15n51*I{15E12} 10|189r15
+16I12*GPIO_Pins{natural} 9|9r50 10|16r36 33r38
+28R9*Port_Pin 31e14 9|11r28 14r28 19r35 21r33 22r33 25r32 28r39 29r39 30r39
+. 31r39 32r39 34r40 41r47 48r46 52r39 53r39 54r39 55r39 56r39 10|8r26 25r28
+. 57r35 63r33 67r33 73r32 84r31 87r38 90r39 93r31 96r31 99r40 116r47 127r46
+. 139r31 145r38 151r39 157r32 163r31
+29e7*Port{15E12} 10|11r19 28r19 60r19 65r20 69r19 85r19 88r19 91r19 94r19
+. 97r20 142r19 148r19 154r19 160r19 171r19 173r19 175r19
+30i7*Pin{16I12} 10|11r44 28r46 60r39 65r40 69r39 85r41 88r42 91r43 94r41
+. 97r53 142r41 148r42 154r43 160r41 170r39
+37E9*MODER_Options 41e6 9|28r56 35r40 42r47 52r57 10|84r48 100r40 117r47
+. 139r48
+37n27*Input{37E9} 9|53r144 54r144 10|132r23
+38n27*General_purpose_output{37E9} 9|42r66 10|117r66
+45E9*OTYPER_Options 47e6 9|29r56 36r40 43r47 53r57 10|87r55 101r40 118r47
+. 145r56
+45n28*Push_Pull{45E9} 9|43r66 10|118r66
+51E9*OSPEEDR_Options 55e6 9|30r56 37r40 44r47 54r57 10|90r56 102r40 119r47
+. 151r57
+54n29*Speed_High{51E9} 9|44r66 10|119r66
+59E9*PUPDR_Options 62e6 9|31r56 38r40 45r47 49r46 55r57 10|93r48 103r40 120r47
+. 128r46 157r50
+59n27*No_Pull{59E9} 9|45r66 49r63 10|120r66 128r63
+73A9 MODER_Array(37E9)<integer>
+90A9 OTYPER_Array(45E9)<integer>
+101A9 OSPEEDR_Array(51E9)<integer>
+114A9 PUPDR_Array(59E9)<integer>
+127R9 GPIOx_BSRR 130e15 10|44r28
+128a7*Set{7|107A9} 10|11m34 11r34 22m29 44m43 49m29 49r29
+129a7*Reset{7|107A9} 10|28m34 28r34 39m29 45m43 52m29 52r29
+139R9 GPIOx_LCKR 143e15 10|165r23
+140a7*Locked_Pins{7|96A9} 10|97r35 165m38 170m21 170r21
+141e7*Lock_Key{7|69E9} 10|166m38 172m21 174m21
+142m7*Reserved{7|28M9} 10|167m38
+159a7*MODER{73A9} 10|85r29 142m29 142r29
+160a7*OTYPER{90A9} 10|88r29 148m29 148r29
+162a7*OSPEEDR{101A9} 10|91r29 154m29 154r29
+163a7*PUPDR{114A9} 10|94r29 160m29 160r29
+164a7*IDR{7|60A9} 10|69r29
+166a7*ODR{7|60A9} 10|60m29 60r29 65r30
+168r7*BSRR{127R9} 10|11m29 11r29 22m24 28m29 28r29 39m24 54m24 181m47 182m47
+. 183m47 184m47 185m47 186m47 187m47 188m47 189m47
+169r7*LCKR{139R9} 10|97r30 171m29 173m29 175m29
+192r4 GPIOA{158R9} 10|181m41 181r41
+195r4 GPIOB{158R9} 10|182m41 182r41
+198r4 GPIOC{158R9} 10|183m41 183r41
+201r4 GPIOD{158R9} 10|184m41 184r41
+204r4 GPIOE{158R9} 10|185m41 185r41
+207r4 GPIOF{158R9} 10|186m41 186r41
+210r4 GPIOG{158R9} 10|187m41 187r41
+213r4 GPIOH{158R9} 10|188m41 188r41
+216r4 GPIOI{158R9} 10|189m41 189r41
+221P9 GPIO_Register_Access(158R9)
+223V13 GPIOx{221P9} 10|11s7 22s7 28s7 39s7 54s7 60s7 65s8 69s7 85s7 88s7
+. 91s7 94s7 97s8 142s7 148s7 154s7 160s7 171s7 173s7 175s7
+X 9 stm32f4-general_purpose_ios-ops.ads
+7K37*Ops 8|11k17 9|60l33 60e36 10|6b42 192l33 192t36
+9A9*Pin_Sets(8|16I12)<integer> 12r51 15r53 17r67 10|14r49 31r53 42r67
+11U14*Set 11>21 10|8b14 12l8 12t11
+11r21 Wire{8|28R9} 10|8b19 11r14 11r39
+12U14*Set 12>21 12>40 10|14b14 23l8 23t11
+12e21 Port{8|15E12} 10|14b19 22r14
+12a40 Pins_Set{9A9} 10|14b38 19r18
+14U14*Reset 14>21 10|25b14 29l8 29t13
+14r21 Wire{8|28R9} 10|25b21 28r14 28r41
+15U14*Reset 15>21 15>40 10|31b14 40l8 40t13
+15e21 Port{8|15E12} 10|31b21 39r14
+15a40 Pins_Reset{9A9} 10|31b40 36r18
+17U14*Set_Reset 17>25 17>44 17>54 10|42b14 55l8 55t17
+17e25 Port{8|15E12} 10|42b25 54r14
+17a44 Pins_Set{9A9} 10|42b44 48r18
+17a54 Pins_Reset{9A9} 10|42b54 51r18
+19U14*Output_Write 19>28 19>45 10|57b14 61l8 61t20 77s23 78s23
+19r28 Wire{8|28R9} 10|57b28 60r14 60r34
+19m45 State{7|14M9} 10|57b45 60r47
+21V13*Output_Read{7|14M9} 21>26 10|63b13 76s15
+21r26 Wire{8|28R9} 10|65r15 65r35
+22V13*Input_Read{7|14M9} 22>26 10|67b13
+22r26 Wire{8|28R9} 10|69r14 69r34
+24w14*Atomic_Switch 10|71b19 82l8 82t21
+25U17 Toggle 25>25 10|73b17 80l11 80t17
+25r25 Wire{8|28R9} 10|73b25 76r28 77r37 78r37
+28V13*Read_Mode{8|37E9} 28>32 53s124 54s124 10|84b13
+28r32 Wire{8|28R9} 10|85r14 85r36
+29V13*Read_Output_Type{8|45E9} 29>32 10|87b13
+29r32 Wire{8|28R9} 10|88r14 88r37
+30V13*Read_Output_Speed{8|51E9} 30>32 10|90b13
+30r32 Wire{8|28R9} 10|91r14 91r38
+31V13*Read_Pull{8|59E9} 31>32 10|93b13
+31r32 Wire{8|28R9} 10|94r14 94r36
+32V13*Is_Locked{boolean} 32>32 39s90 46s97 50s94 52s98 53s98 54s98 55s98
+. 56s98 10|96b13
+32r32 Wire{8|28R9} 10|97r15 97r48
+34U14*Initialize_Pin 34>30 35>30 36>30 37>30 38>30 39>30 10|99b14 114l8 114t22
+. 124s7
+34r30 Wire{8|28R9} 39r101 10|99b30 107r25 108r25 109r25 110r25 112r20
+35e30 Mode{8|37E9} 10|100b30 107r31
+36e30 Out_T{8|45E9} 10|101b30 108r31
+37e30 Speed{8|51E9} 10|102b30 109r31
+38e30 Pull{8|59E9} 10|103b30 110r31
+39b30 Lock_it{boolean} 10|104b30 111r10
+41U14*Initialize_Output_Pin 41>37 42>37 43>37 44>37 45>37 46>37 10|116b14
+. 125l8 125t29
+41r37 Wire{8|28R9} 46r108 10|116b37 124r23
+42e37 Mode{8|37E9} 10|117b37 124r29
+43e37 Out_T{8|45E9} 10|118b37 124r35
+44e37 Speed{8|51E9} 10|119b37 124r42
+45e37 Pull{8|59E9} 10|120b37 124r49
+46b37 Lock_it{boolean} 10|121b37 124r55
+48U14*Initialize_Input_Pin 48>36 49>36 50>36 10|127b14 137l8 137t28
+48r36 Wire{8|28R9} 50r105 10|127b36 132r17 133r17 135r20
+49e36 Pull{8|59E9} 10|128b36 133r23
+50b36 Lock_it{boolean} 10|129b36 134r10
+52U14*Set_Mode 52>32 52>49 10|107s7 132s7 139b14 143l8 143t16
+52r32 Wire{8|28R9} 52r109 10|139b24 142r14 142r36
+52e49 Mode{8|37E9} 10|139b41 142r49
+53U14*Set_Output_Type 53>32 53>49 10|108s7 145b14 149l8 149t23
+53r32 Wire{8|28R9} 53r109 53r135 10|145b31 148r14 148r37
+53e49 Out_T{8|45E9} 10|145b48 148r50
+54U14*Set_Output_Speed 54>32 54>49 10|109s7 151b14 155l8 155t24
+54r32 Wire{8|28R9} 54r109 54r135 10|151b32 154r14 154r38
+54e49 Speed{8|51E9} 10|151b49 154r51
+55U14*Set_Pull 55>32 55>49 10|110s7 133s7 157b14 161l8 161t16
+55r32 Wire{8|28R9} 55r109 10|157b25 160r14 160r36
+55e49 Pull{8|59E9} 10|157b42 160r49
+56U14*Lock_Pin 56>32 10|112s10 135s10 163b14 176l8 176t16
+56r32 Wire{8|28R9} 56r109 10|163b24 170r34 171r14 173r14 175r14
+58V13*Set_Reset_Register_Address{7|45M9} 58>41 10|178b13
+58e41 Port{8|15E12} 10|180r12
+X 10 stm32f4-general_purpose_ios-ops.adb
+16a7 Pins_To_Set{7|107A9} 20m10 22r36
+19i11 Pin=19:18{8|16I12} 20r23
+33a7 Pins_To_Reset{7|107A9} 37m10 39r38
+36i11 Pin=36:18{8|16I12} 37r25
+44r7 Set_Reset_Register{8|127R9} 49m10 49r10 52m10 52r10 54r32
+48i11 Pin=48:18{8|16I12} 49r34
+51i11 Pin=51:18{8|16I12} 52r36
+165r7 Lock_Register{8|139R9} 170m7 170r7 171r37 172m7 173r37 174m7 175r37
+X 11 system.ads
+65K9*System 10|4r6 4r35 11|179e11
+95M9*Address
+X 17 s-bcprmu.ads
+39U14*Start_All_CPUs 40i<c,__gnat_start_slave_cpus>22
+X 30 s-stoele.ads
+42K16*Storage_Elements 10|4w13 4r42 30|117e28
+105M9*Integer_Address
+112V13*To_Integer{105M9} 10|181s29 182s29 183s29 184s29 185s29 186s29 187s29
+. 188s29 189s29
+X 34 s-taskin.ads
+361V13*Get_Sec_Stack{11|95M9} 362i<c,__gnat_get_secondary_stack>22
+

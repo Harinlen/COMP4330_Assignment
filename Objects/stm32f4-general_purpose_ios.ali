@@ -1,0 +1,181 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB ES ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  6d5ff801 NE OO PK IU
+W interfaces%s		interfac.ads		interfac.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W system%s		system.ads		system.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 2 stm32f4.ads
+9K9*STM32F4 244e12 3|11r9 237r5
+14M9*Bit
+17M9*Bits_4 3|153r42 154r42
+21M9*Bits_8
+28M9*Bits_15 3|142r21
+29M9*Bits_16 3|161r20 165r20 167r20
+45M9*Bits_32
+50M12*Word{45M9} 3|73r78 101r82 114r78 130r38 143r38 153r68 154r68
+51M12*Half_Word{29M9} 3|90r80
+52M12*Byte{21M9} 3|172r38
+60A9*Bit_Array(14M9)<integer> 3|164r20 166r20
+69E9*Lock 69e52 3|141r21
+96A9*Lock_Array(69E9)<integer> 3|140r21
+107A9*Setting_Array(80E9)<integer> 3|129r15
+210N4 Base_GPIOA 3|193r46
+211N4 Base_GPIOB 3|196r46
+212N4 Base_GPIOC 3|199r46
+213N4 Base_GPIOD 3|202r46
+214N4 Base_GPIOE 3|205r46
+215N4 Base_GPIOF 3|208r46
+216N4 Base_GPIOG 3|211r46
+217N4 Base_GPIOH 3|214r46
+218N4 Base_GPIOI 3|217r46
+X 3 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 2|9k9 3|73E9 237l13 237e32
+15E12*GPIO_Ports 15e54 18r8 29r14 75r40 103r42 116r40 223r27
+15n27*A{15E12} 18r24 76r7 104r10 117r7 226r15
+15n30*B{15E12} 19r24 80r7 105r10 121r7 227r15
+15n33*C{15E12} 20r24 228r15
+15n36*D{15E12} 21r24 229r15
+15n39*E{15E12} 22r24 230r15
+15n42*F{15E12} 23r24 231r15
+15n45*G{15E12} 24r24 232r15
+15n48*H{15E12} 25r24 233r15
+15n51*I{15E12} 26r24 234r15
+16I12*GPIO_Pins{natural} 30r14 73r31 90r32 101r33 114r31 129r30 140r33 164r31
+. 166r31
+28R9*Port_Pin 31e14 33r50
+29e7*Port{15E12}
+30i7*Pin{16I12}
+33A9*Port_Pins(28R9)<integer>
+37E9*MODER_Options 41e6 68r8 73r45
+37n27*Input{37E9} 68r27 79r23 82r23 83r28
+38n27*General_purpose_output{37E9} 69r27
+39n27*Alternate_function{37E9} 70r27 76r23 77r23 78r23 80r23 81r23
+40n27*Analog{37E9} 71r27
+45E9*OTYPER_Options 47e6 87r8 90r46
+45n28*Push_Pull{45E9} 87r28 92r60
+46n28*Open_Drain{45E9} 88r28
+51E9*OSPEEDR_Options 55e6 96r8 101r47
+51n29*Speed_Low{51E9} 96r29 104r48 105r48 106r48
+52n29*Speed_Medium{51E9} 97r29
+53n29*Speed_Fast{51E9} 98r29
+54n29*Speed_High{51E9} 99r29 104r26 105r26
+59E9*PUPDR_Options 62e6 110r8 114r45
+59n27*No_Pull{59E9} 110r27 120r28 122r28 123r28
+60n27*Pull_Up{59E9} 111r27 117r24 119r24 121r23
+61n27*Pull_Down{59E9} 112r27 118r24
+73A9 MODER_Array(37E9)<integer> 75r55 159r20
+75a4 GPIO_MODER_Resets(73A9)
+90A9 OTYPER_Array(45E9)<integer> 92r33 160r20
+92a4 GPIO_OTYPER_Reset{90A9}
+101A9 OSPEEDR_Array(51E9)<integer> 103r57 162r20
+103a4 GPIO_OSPEEDR_Resets(101A9)
+114A9 PUPDR_Array(59E9)<integer> 116r55 163r20
+116a4 GPIO_PUPDR_Resets(114A9)
+127R9 GPIOx_BSRR 130e15 132r8 168r20
+128a7*Set{2|107A9} 133r7
+129a7*Reset{2|107A9} 134r7
+139R9 GPIOx_LCKR 143e15 145r8 169r20
+140a7*Locked_Pins{2|96A9} 146r7
+141e7*Lock_Key{2|69E9} 147r7
+142m7*Reserved{2|28M9} 148r7
+153A9 AFRL_Array(2|17M9)<integer> 170r20
+154A9 AFRH_Array(2|17M9)<integer> 171r20
+158R9 GPIOx_Register 172e15 174r8 192r20 195r20 198r20 201r20 204r20 207r20
+. 210r20 213r20 216r20 221r44
+159a7*MODER{73A9} 175r7
+160a7*OTYPER{90A9} 176r7
+161m7*Reserved_1{2|29M9} 177r7
+162a7*OSPEEDR{101A9} 178r7
+163a7*PUPDR{114A9} 179r7
+164a7*IDR{2|60A9} 180r7
+165m7*Reserved_2{2|29M9} 181r7
+166a7*ODR{2|60A9} 182r7
+167m7*Reserved_3{2|29M9} 183r7
+168r7*BSRR{127R9} 184r7
+169r7*LCKR{139R9} 185r7
+170a7*AFRL{153A9} 186r7
+171a7*AFRH{154A9} 187r7
+192r4 GPIOA{158R9} 226m20 226r20
+195r4 GPIOB{158R9} 227m20 227r20
+198r4 GPIOC{158R9} 228m20 228r20
+201r4 GPIOD{158R9} 229m20 229r20
+204r4 GPIOE{158R9} 230m20 230r20
+207r4 GPIOF{158R9} 231m20 231r20
+210r4 GPIOG{158R9} 232m20 232r20
+213r4 GPIOH{158R9} 233m20 233r20
+216r4 GPIOI{158R9} 234m20 234r20
+221P9 GPIO_Register_Access(158R9) 223r46
+223V13 GPIOx{221P9} 223>20
+223e20 Port{15E12} 225r12
+X 4 system.ads
+65K9*System 3|7w6 7r18 193r27 196r27 199r27 202r27 205r27 208r27 211r27 214r27
+. 217r27 4|179e11
+95M9*Address 3|193r27 196r27 199r27 202r27 205r27 208r27 211r27 214r27 217r27
+

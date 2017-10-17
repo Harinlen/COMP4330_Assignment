@@ -1,0 +1,154 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB LC TF  ES ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U led_handling%b	led_handling.adb	226ac9a3 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W stm32f4.general_purpose_ios.ops%s  stm32f4-general_purpose_ios-ops.adb  stm32f4-general_purpose_ios-ops.ali
+W stm32f4.reset_and_clock_control%s  stm32f4-reset_and_clock_control.ads  stm32f4-reset_and_clock_control.ali
+W stm32f4.reset_and_clock_control.ops%s  stm32f4-reset_and_clock_control-ops.adb  stm32f4-reset_and_clock_control-ops.ali
+
+U led_handling%s	led_handling.ads	0555935c EE NE OO PK
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+
+D ada.ads		20170517144320 76789da1 ada%s
+D a-unccon.ads		20170517144320 31484697 ada.unchecked_conversion%s
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D i-stm32.ads		20170517144320 4d2e1e9b interfaces.stm32%s
+D i-stm32-pwr.ads	20170517144320 10ed2a13 interfaces.stm32.pwr%s
+D i-stm32-rcc.ads	20170517144320 ed083a96 interfaces.stm32.rcc%s
+D led_handling.ads	20150921173120 8bf2f877 led_handling%s
+D led_handling.adb	20150925123911 2b378a0e led_handling%b
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-general_purpose_ios-ops.ads  20151023162437 9c2ed444 stm32f4.general_purpose_ios.ops%s
+D stm32f4-general_purpose_ios-ops.adb  20151023162436 ff7cc6fa stm32f4.general_purpose_ios.ops%b
+D stm32f4-reset_and_clock_control.ads  20151004222708 cd9e8e6c stm32f4.reset_and_clock_control%s
+D stm32f4-reset_and_clock_control-ops.ads  20151023162437 1e816f9e stm32f4.reset_and_clock_control.ops%s
+D stm32f4-reset_and_clock_control-ops.adb  20151023162437 8f04ff92 stm32f4.reset_and_clock_control.ops%b
+D stm32f4-timers.ads	20150926112245 dc9b3fca stm32f4.timers%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-assert.ads		20170517144320 cd8d2c94 system.assertions%s
+D s-bb.ads		20170517144320 09e072ae system.bb%s
+D s-bbbopa.ads		20170517144320 95d97b26 system.bb.board_parameters%s
+D s-bbbosu.ads		20170517144320 9b59a61f system.bb.board_support%s
+D s-bbcppr.ads		20170517144320 bcfa73ad system.bb.cpu_primitives%s
+D s-bcprmu.ads		20170517144320 043d3736 system.bb.cpu_primitives.multiprocessors%s
+D s-bbinte.ads		20170517144320 d9fc23b0 system.bb.interrupts%s
+D s-bbmcpa.ads		20170517144320 c4c55388 system.bb.mcu_parameters%s
+D s-bbpara.ads		20170517144320 77379e7b system.bb.parameters%s
+D s-bbthre.ads		20170517144320 d6c36e4f system.bb.threads%s
+D s-bbthqu.ads		20170517144320 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20170517144320 ad086247 system.bb.time%s
+D s-multip.ads		20170517144320 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20170517144320 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20170517144320 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20170517144320 2d4f0621 system.os_interface%s
+D s-parame.ads		20170517144320 c9fe535f system.parameters%s
+D s-stm32.ads		20170517144320 e898dba2 system.stm32%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170517144320 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20170517144320 801abd01 system.task_info%s
+D s-taspri.ads		20170517144320 351848fa system.task_primitives%s
+D s-taskin.ads		20170517144320 2a4da085 system.tasking%s
+D s-taprob.ads		20170517144320 c8fc0753 system.tasking.protected_objects%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 7 led_handling.ads
+7K9*LED_Handling 12l5 12e17 8|8b14 31l5 31t17
+9U14*Initialize 9>26 8|10b14 21l8 21t18 27s10
+9r26 Wire{10|28R9} 8|10b26 12r33 16r32
+10U14*Initialize 10>26 8|23b14 29l8 29t18
+10a26 Wires{10|33A9} 8|23b26 26r18 27r22
+X 8 led_handling.adb
+12e7 Port{10|15E12} 15r15
+26i11 LED{integer} 27r29
+X 9 stm32f4.ads
+9K9*STM32F4 7|5r6 5r39 8|5r6 5r47 6r6 6r47 9|244e12
+X 10 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 7|5w14 5r47 8|5r14 5r55 10|237e32
+15E12*GPIO_Ports 8|12r14 10|15e54
+28R9*Port_Pin 7|9r34 8|10r33 10|31e14
+29e7*Port{15E12} 8|12m38
+33A9*Port_Pins(28R9)<integer> 7|10r34 8|23r34
+38n27*General_purpose_output{37E9} 8|17r32
+45n28*Push_Pull{45E9} 8|18r32
+54n29*Speed_High{51E9} 8|19r32
+59n27*No_Pull{59E9} 8|20r32
+X 11 stm32f4-general_purpose_ios-ops.ads
+7K37*Ops 8|5w34 5r75 11|60e36
+34U14*Initialize_Pin 8|16s7
+34r30 Wire{10|28R9} 8|16r23
+35e30 Mode{10|37E9} 8|17r23
+36e30 Out_T{10|45E9} 8|18r23
+37e30 Speed{10|51E9} 8|19r23
+38e30 Pull{10|59E9} 8|20r23
+X 13 stm32f4-reset_and_clock_control.ads
+11K17*Reset_and_clock_control 8|6r14 6r55 13|1049e36
+X 14 stm32f4-reset_and_clock_control-ops.ads
+10K41*Ops 8|6w38 6r79 14|100e40
+90U14*Enable 8|15s7
+X 17 system.ads
+95M9*Address
+X 23 s-bcprmu.ads
+39U14*Start_All_CPUs 40i<c,__gnat_start_slave_cpus>22
+X 40 s-taskin.ads
+361V13*Get_Sec_Stack{17|95M9} 362i<c,__gnat_get_secondary_stack>22
+

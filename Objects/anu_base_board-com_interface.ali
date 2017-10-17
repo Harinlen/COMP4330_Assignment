@@ -1,0 +1,175 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB LC TF  ES ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U anu_base_board.com_interface%b  anu_base_board-com_interface.adb  23c00686 OO PK
+W anu_base_board%s	anu_base_board.ads	anu_base_board.ali
+W anu_base_board.config%s  anu_base_board-config.ads  anu_base_board-config.ali
+W interfaces%s		interfac.ads		interfac.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W stm32f4.general_purpose_ios.ops%s  stm32f4-general_purpose_ios-ops.adb  stm32f4-general_purpose_ios-ops.ali  AD
+W stm32f4.reset_and_clock_control%s  stm32f4-reset_and_clock_control.ads  stm32f4-reset_and_clock_control.ali
+W stm32f4.reset_and_clock_control.ops%s  stm32f4-reset_and_clock_control-ops.adb  stm32f4-reset_and_clock_control-ops.ali  AD
+
+U anu_base_board.com_interface%s  anu_base_board-com_interface.ads  0fd275f2 EB EE NE OO PK
+W anu_base_board%s	anu_base_board.ads	anu_base_board.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+
+D ada.ads		20170517144320 76789da1 ada%s
+D a-unccon.ads		20170517144320 31484697 ada.unchecked_conversion%s
+D anu_base_board.ads	20150918154836 bf07bf5d anu_base_board%s
+D anu_base_board-com_interface.ads  20150919124527 35c8c540 anu_base_board.com_interface%s
+D anu_base_board-com_interface.adb  20150925123940 3de8c495 anu_base_board.com_interface%b
+D anu_base_board-config.ads  20150921185821 27e8d7a2 anu_base_board.config%s
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D i-stm32.ads		20170517144320 4d2e1e9b interfaces.stm32%s
+D i-stm32-pwr.ads	20170517144320 10ed2a13 interfaces.stm32.pwr%s
+D i-stm32-rcc.ads	20170517144320 ed083a96 interfaces.stm32.rcc%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-general_purpose_ios-ops.ads  20151023162437 9c2ed444 stm32f4.general_purpose_ios.ops%s
+D stm32f4-general_purpose_ios-ops.adb  20151023162436 ff7cc6fa stm32f4.general_purpose_ios.ops%b
+D stm32f4-reset_and_clock_control.ads  20151004222708 cd9e8e6c stm32f4.reset_and_clock_control%s
+D stm32f4-reset_and_clock_control-ops.ads  20151023162437 1e816f9e stm32f4.reset_and_clock_control.ops%s
+D stm32f4-reset_and_clock_control-ops.adb  20151023162437 8f04ff92 stm32f4.reset_and_clock_control.ops%b
+D stm32f4-timers.ads	20150926112245 dc9b3fca stm32f4.timers%s
+D stm32f4-usart.ads	20151006004129 79219e0f stm32f4.usart%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-assert.ads		20170517144320 cd8d2c94 system.assertions%s
+D s-bb.ads		20170517144320 09e072ae system.bb%s
+D s-bbbopa.ads		20170517144320 95d97b26 system.bb.board_parameters%s
+D s-bbbosu.ads		20170517144320 9b59a61f system.bb.board_support%s
+D s-bbcppr.ads		20170517144320 bcfa73ad system.bb.cpu_primitives%s
+D s-bcprmu.ads		20170517144320 043d3736 system.bb.cpu_primitives.multiprocessors%s
+D s-bbinte.ads		20170517144320 d9fc23b0 system.bb.interrupts%s
+D s-bbmcpa.ads		20170517144320 c4c55388 system.bb.mcu_parameters%s
+D s-bbpara.ads		20170517144320 77379e7b system.bb.parameters%s
+D s-bbthre.ads		20170517144320 d6c36e4f system.bb.threads%s
+D s-bbthqu.ads		20170517144320 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20170517144320 ad086247 system.bb.time%s
+D s-multip.ads		20170517144320 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20170517144320 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20170517144320 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20170517144320 2d4f0621 system.os_interface%s
+D s-parame.ads		20170517144320 c9fe535f system.parameters%s
+D s-stm32.ads		20170517144320 e898dba2 system.stm32%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170517144320 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20170517144320 801abd01 system.task_info%s
+D s-taspri.ads		20170517144320 351848fa system.task_primitives%s
+D s-taskin.ads		20170517144320 2a4da085 system.tasking%s
+D s-taprob.ads		20170517144320 c8fc0753 system.tasking.protected_objects%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 3 anu_base_board.ads
+5K9*ANU_Base_Board 34e19 4|7r9 17r5 5|5r6 5r47 10r14 49r5
+7I9*Com_Ports<short_short_integer> 4|11r29 12r29 13r29 15r26 5|12r26 18r28
+. 24r29 30r26 35r16
+14E9*Com_Directions 14e46 5|36r18
+16e4*Rx=16:32{14E9} 5|32r36 44r47 45r47
+17e4*Tx=17:32{14E9} 5|15r29 21r31 27r46 43r47 46r47 47r47
+19E9*Com_Features 19e39 5|37r25
+19n26*Enable{19E9} 5|40r55 45r51 46r51
+19n34*Data{19E9} 5|15r33 21r35 27r50 32r40 43r51 44r51 47r51
+X 4 anu_base_board-com_interface.ads
+7K24*Com_Interface 3|5k9 4|17l20 17e33 5|10b29 49l20 49t33
+11U14*Set 11>22 5|12b14 16l8 16t11
+11i22 Port{3|7I9} 5|12b19 15r23
+12U14*Reset 12>22 5|18b14 22l8 22t13
+12i22 Port{3|7I9} 5|18b21 21r25
+13U14*Toggle 13>22 5|24b14 28l8 28t14
+13i22 Port{3|7I9} 5|24b22 27r40
+15V13*Read{11|14M9} 15>19 5|30b13
+15i19 Port{3|7I9} 5|32r30
+X 5 anu_base_board-com_interface.adb
+35i8 Port{3|7I9} 38r32 40r44 43r41 44r41 45r41 46r41 47r41
+36e11 Dir{3|14E9} 38r38 40r50
+37e14 Feature{3|19E9} 38r43
+X 6 anu_base_board-config.ads
+8K24*Config 5|5w21 5r62 6|48e26
+21a4*Com_Wires(12|28R9) 5|15r12 21r14 27r29 32r19 38r21 40r33 43r30 44r30
+. 45r30 46r30 47r30
+X 11 stm32f4.ads
+9K9*STM32F4 4|5w6 5r19 5|6r6 6r47 7r6 7r47 8r6 8r47 11|244e12
+14M9*Bit 4|15r44 5|30r44
+X 12 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 5|6w14 6r55 7r14 7r55 12|237e32
+29e7*Port{15E12} 5|38r52
+61n27*Pull_Down{59E9} 5|44r58
+X 13 stm32f4-general_purpose_ios-ops.ads
+7K37*Ops 5|7w34 7r75 13|60e36
+11U14*Set 5|15s7 46s7 47s7
+14U14*Reset 5|21s7 45s7
+22V13*Input_Read{11|14M9} 5|32s7
+24w14*Atomic_Switch 5|27r7
+25U17 Toggle 5|27s21
+41U14*Initialize_Output_Pin 5|40s10 43s7
+48U14*Initialize_Input_Pin 5|44s7
+X 15 stm32f4-reset_and_clock_control.ads
+11K17*Reset_and_clock_control 5|8r14 8r55 15|1049e36
+X 16 stm32f4-reset_and_clock_control-ops.ads
+10K41*Ops 5|8w38 8r79 16|100e40
+90U14*Enable 5|38s13
+X 20 system.ads
+95M9*Address
+X 26 s-bcprmu.ads
+39U14*Start_All_CPUs 40i<c,__gnat_start_slave_cpus>22
+X 43 s-taskin.ads
+361V13*Get_Sec_Stack{20|95M9} 362i<c,__gnat_get_secondary_stack>22
+

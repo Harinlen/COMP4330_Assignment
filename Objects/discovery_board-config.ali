@@ -1,0 +1,93 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB ES ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U discovery_board.config%s  discovery_board-config.ads  676a8022 NE OO PK
+W discovery_board%s	discovery_board.ads	discovery_board.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+
+D discovery_board.ads	20150918090052 0eba7ef5 discovery_board%s
+D discovery_board-config.ads  20150921173105 e77795fc discovery_board.config%s
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 1 discovery_board.ads
+5K9*Discovery_Board 9e20 2|7r9 17r5
+7E9*LEDs 7e43 2|9r32
+7n18*Green{7E9} 2|10r7
+7n25*Orange{7E9} 2|11r7
+7n33*Red{7E9} 2|12r7
+7n38*Blue{7E9} 2|13r7
+X 2 discovery_board-config.ads
+7K25*Config 1|5k9 2|17l21 17e27
+9a4*LED_Wires(5|28R9)
+15r4*Button_Wire{5|28R9}
+X 4 stm32f4.ads
+9K9*STM32F4 2|5r6 5r39 4|244e12
+X 5 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 2|5w14 5r47 5|237e32
+15n27*A{15E12} 2|15r48
+15n36*D{15E12} 2|10r26 11r26 12r26 13r26
+16I12*GPIO_Pins{natural}
+28R9*Port_Pin 2|9r41 15r27 5|31e14
+29e7*Port{15E12} 2|10m18 11m18 12m18 13m18 15m40
+30i7*Pin{16I12} 2|10m29 11m29 12m29 13m29 15m51
+

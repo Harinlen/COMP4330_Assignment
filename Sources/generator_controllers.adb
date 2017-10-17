@@ -2,17 +2,26 @@
 -- Uwe R. Zimmer, Australia 2015
 --
 
-with Ada.Real_Time;                       use Ada.Real_Time;
-with ANU_Base_Board;                      use ANU_Base_Board;
-with ANU_Base_Board.Com_Interface;        use ANU_Base_Board.Com_Interface;
-with ANU_Base_Board.LED_Interface;        use ANU_Base_Board.LED_Interface;
-with Discovery_Board;                     use Discovery_Board;
-with Discovery_Board.Button;              use Discovery_Board.Button;
-with Discovery_Board.LED_Interface;       use Discovery_Board.LED_Interface;
-with STM32F4;                             use type STM32F4.Bit, STM32F4.Bits_32;
-with STM32F4.Random_number_generator.Ops; use STM32F4.Random_number_generator.Ops;
-with STM32F4.Reset_and_clock_control.Ops; use STM32F4.Reset_and_clock_control.Ops;
-with System;                              use System;
+with Ada.Interrupts.Names;                        use Ada.Interrupts.Names;
+with Ada.Real_Time;                               use Ada.Real_Time;
+with ANU_Base_Board;                              use ANU_Base_Board;
+with ANU_Base_Board.Config;                       use ANU_Base_Board.Config;
+with ANU_Base_Board.Com_Interface;                use ANU_Base_Board.Com_Interface;
+with ANU_Base_Board.LED_Interface;                use ANU_Base_Board.LED_Interface;
+with Discovery_Board;                             use Discovery_Board;
+with Discovery_Board.Button;                      use Discovery_Board.Button;
+with Discovery_Board.Config;                      use Discovery_Board.Config;
+with Discovery_Board.LED_Interface;               use Discovery_Board.LED_Interface;
+with STM32F4;                                     use type STM32F4.Bit, STM32F4.Bits_32;
+use STM32F4;
+with STM32F4.General_purpose_IOs;                 use STM32F4.General_purpose_IOs;
+with STM32F4.General_purpose_IOs.Ops;             use STM32F4.General_purpose_IOs.Ops;
+with STM32F4.Interrupts_and_Events;               use STM32F4.Interrupts_and_Events;
+with STM32F4.Interrupts_and_Events.Ops;           use STM32F4.Interrupts_and_Events.Ops;
+with STM32F4.System_configuration_controller.Ops; use STM32F4.System_configuration_controller.Ops;
+with STM32F4.Random_number_generator.Ops;         use STM32F4.Random_number_generator.Ops;
+with STM32F4.Reset_and_clock_control.Ops;         use STM32F4.Reset_and_clock_control.Ops;
+with System;                                      use System;
 
 package body Generator_Controllers is
 
@@ -68,6 +77,52 @@ package body Generator_Controllers is
 
    LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
 
+   protected Com_Port_Reader with Interrupt_Priority => Interrupt_Priority'Last is
+      procedure Initialized;
+   private
+      procedure Com_Port_Interrupt_Handler with Attach_Handler => EXTI9_5_Interrupt;
+      -- pragma Attach_Handler (Com_Port_Reader.Com_Port_Interrupt_Handler, EXTI9_5_Interrupt);
+      pragma Unreferenced (Com_Port_Interrupt_Handler);
+   end Com_Port_Reader;
+
+   protected body Com_Port_Reader is
+      procedure Initialized is
+      begin
+         for Port in Com_Ports loop
+            -- Get the port wire data.
+            declare
+               Port_Wire : constant Port_Pin := Com_Wires (Port, Rx, Da);
+            begin
+               Enable (System_Configuration_Contr);
+               Set_Interrupt_Source (Interrupt_No => External_Interrupt_No (Port_Wire.Pin),
+                                     Port => Port_Wire.Port);
+
+               Set_Trigger (Line    => Port_Wire.Pin,
+                            Raising => Enable,
+                            Falling => Disable);
+               Masking (Line => Port_Wire.Pin,
+                        State => Unmasked);
+            end;
+         end loop;
+      end Initialized;
+
+      procedure Com_Port_Interrupt_Handler is
+      begin
+         for Port in Com_Ports loop
+            declare
+               Port_Wire : constant Port_Pin := Com_Wires (Port, Rx, Da);
+            begin
+               if Happened (Port_Wire.Pin) then
+                  Clear_Interrupt (Port_Wire.Pin);
+                  On ((Port, L));
+               else
+                  Off ((Port, L));
+               end if;
+            end;
+         end loop;
+      end Com_Port_Interrupt_Handler;
+   end Com_Port_Reader;
+
    task Signal_Generator with
      Storage_Size => 4 * 1024,
      Priority     => Default_Priority;
@@ -88,14 +143,12 @@ package body Generator_Controllers is
             Sine_X := Sine_X + Sample_X_Slide;
             -- Update the light, write the signal.
             if Sine_Sample < 0.0 then
-               On (Blue);
                for Port in Com_Ports'First .. Com_Ports'Last loop
                   Reset  (Port);
                   Off ((Port, R));
                end loop;
 
             else
-               Off (Blue);
                for Port in Com_Ports'First .. Com_Ports'Last loop
                   Set  (Port);
                   On ((Port, R));
@@ -104,6 +157,10 @@ package body Generator_Controllers is
             -- Time limitation for one single sample.
             delay until Next_Sample_Start;
          end loop;
+         -- Wait until next sine start
+         delay until Next_Sine_Start;
+         -- Calculate the new start time.
+         Next_Sine_Start := System_Start + Sine_Single_Period;
       end loop;
    end Signal_Generator;
 

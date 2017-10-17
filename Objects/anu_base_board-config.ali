@@ -1,0 +1,111 @@
+V "GNAT Lib v2017"
+A -O2
+A -gnatA
+A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -g
+A -gnatVn
+A -gnatVc
+A -gnatVd
+A -gnatVe
+A -gnatVf
+A -gnatVi
+A -gnatVm
+A -gnatVo
+A -gnatVp
+A -gnatVs
+A -gnatVt
+A -gnatw.e
+A -gnatw.Y
+A -gnatw.X
+A -gnatQ
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnata
+A -gnato
+A -gnatn
+A -g
+P DB ES ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U anu_base_board.config%s  anu_base_board-config.ads  6f699ddb NE OO PK
+W anu_base_board%s	anu_base_board.ads	anu_base_board.ali
+W stm32f4%s		stm32f4.ads		stm32f4.ali
+W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
+W stm32f4.usart%s	stm32f4-usart.ads	stm32f4-usart.ali
+
+D anu_base_board.ads	20150918154836 bf07bf5d anu_base_board%s
+D anu_base_board-config.ads  20150921185821 27e8d7a2 anu_base_board.config%s
+D interfac.ads		20170517144320 5ab55268 interfaces%s
+D stm32f4.ads		20151004221802 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20150925122245 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-usart.ads	20151006004129 79219e0f stm32f4.usart%s
+D system.ads		20170517144320 66e59cc5 system%s
+D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
+D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+X 1 anu_base_board.ads
+5K9*ANU_Base_Board 34e19 2|8r9 48r5
+7I9*Com_Ports<short_short_integer> 2|10r32 21r32 42r33
+9E9*Indicators 9e36 2|10r43
+11e4*L=11:27{9E9} 2|12r13 14r13 16r13 18r13
+12e4*R=12:27{9E9} 2|13r13 15r13 17r13 19r13
+14E9*Com_Directions 14e46 2|22r32
+16e4*Rx=16:32{14E9} 2|25r13 29r13 33r13 37r13
+17e4*Tx=17:32{14E9} 2|27r13 31r13 35r13 39r13
+19E9*Com_Features 19e39 2|23r32
+21e4*En=21:30{19E9} 2|25r20 27r20 29r20 31r20 33r20 35r20 37r20 39r20
+22e4*Da=22:30{19E9} 2|26r20 28r20 30r20 32r20 34r20 36r20 38r20 40r20
+X 2 anu_base_board-config.ads
+8K24*Config 1|5k9 2|48l20 48e26
+10a4*LED_Wires(5|28R9)
+21a4*Com_Wires(5|28R9)
+42a4*UART_Wires(6|15I12)
+X 4 stm32f4.ads
+9K9*STM32F4 2|5r6 5r39 6r6 6r39 4|244e12
+X 5 stm32f4-general_purpose_ios.ads
+11K17*General_purpose_IOs 2|5w14 5r47 5|237e32
+15n27*A{15E12} 2|16r27 17r27 18r27 19r27
+15n30*B{15E12} 2|25r35 26r35 27r35 28r35 39r35
+15n33*C{15E12} 2|33r35 34r35 35r35 36r35 40r35
+15n36*D{15E12} 2|29r35 30r35 31r35 32r35 37r35 38r35
+15n39*E{15E12} 2|12r27 13r27 14r27 15r27
+16I12*GPIO_Pins{natural}
+28R9*Port_Pin 2|10r58 23r49 5|31e14
+29e7*Port{15E12} 2|12m19 13m19 14m19 15m19 16m19 17m19 18m19 19m19 25m27
+. 26m27 27m27 28m27 29m27 30m27 31m27 32m27 33m27 34m27 35m27 36m27 37m27
+. 38m27 39m27 40m27
+30i7*Pin{16I12} 2|12m30 13m30 14m30 15m30 16m30 17m30 18m30 19m30 25m38 26m38
+. 27m38 28m38 29m38 30m38 31m38 32m38 33m38 34m38 35m38 36m38 37m38 38m38
+. 39m38 40m38
+X 6 stm32f4-usart.ads
+11K17*USART 2|6w14 6r47 6|507e18
+15I12*USARTs<short_short_integer> 2|42r47
+
