@@ -1,7 +1,7 @@
 V "GNAT Lib v2017"
 A -O2
 A -gnatA
-A --RTS=/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A --RTS=/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
 A -mlittle-endian
 A -mfloat-abi=hard
 A -mcpu=cortex-m4
@@ -63,11 +63,11 @@ W stm32f4%s		stm32f4.ads		stm32f4.ali
 W system%s		system.ads		system.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D stm32f4.ads		20151004221802 851d0fef stm32f4%s
-D stm32f4-reset_and_clock_control.ads  20151004222708 cd9e8e6c stm32f4.reset_and_clock_control%s
+D stm32f4.ads		20171010130739 851d0fef stm32f4%s
+D stm32f4-reset_and_clock_control.ads  20171010130739 cd9e8e6c stm32f4.reset_and_clock_control%s
 D system.ads		20170517144320 66e59cc5 system%s
 D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
-D /students/u5870415/COMP4330/Generator/Generator/gnat.adc  20150914202116 00000000
+D /home/saki/Documents/assignment/COMP4330Assi1/gnat.adc  20171010130739 00000000
 X 1 stm32f4.ads
 9K9*STM32F4 244e12 2|11r9 1049r5
 14M9*Bit 2|77r20 122r20 126r20 231r21 368r20 376r20 379r20 430r20 432r20

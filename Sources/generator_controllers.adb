@@ -52,6 +52,7 @@ package body Generator_Controllers is
    System_Start : constant Time := Clock;
    Sine_Single_Period_Value : constant Integer := 1000 / Signal_Frequency;
    Sine_Single_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value);
+   Half_Single_Period : constant Time_Span := Sine_Single_Period / 2;
    Calc_Signal_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value / Sample_Frequency);
    Current_Cycle_Start : Time := System_Start;
    Next_Cycle_Should_Start : Time := System_Start;
@@ -80,7 +81,6 @@ package body Generator_Controllers is
    end Sine;
 
    Com_Ports_Semaphore : array (Com_Ports) of Suspension_Object;
-   Com_Ports_Up : array (Com_Ports) of Time;
 
    LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
 
@@ -105,13 +105,19 @@ package body Generator_Controllers is
    end Com_Port_Reader;
 
    procedure Com_Port_Check (Com_Port_Id : Com_Ports) is
+      Arrived_Cycle_Time : Time_Span;
    begin
       -- Wait for the first signal.
       Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
       -- Toggle.
-      Toggle (LED_Pattern (Com_Port_Id));
+      Toggle ((Com_Port_Id, L));
+      -- Calculate the arrived period time.
+      Arrived_Cycle_Time := Clock - Current_Cycle_Start;
       -- Update the offset time.
-      Next_Cycle_Start := Next_Cycle_Should_Start + (Clock - Current_Cycle_Start);
+      if Arrived_Cycle_Time < Half_Single_Period then
+         -- Only offset the one after current.
+         Next_Cycle_Start := Next_Cycle_Should_Start + Arrived_Cycle_Time;
+      end if;
    end Com_Port_Check;
 
    task Com_Port_Checker_One with
@@ -179,9 +185,9 @@ package body Generator_Controllers is
             -- Time limitation for one single sample.
             delay until Next_Sample_Start;
          end loop;
-         -- Wait until next sine start
-         delay until Next_Cycle_Should_Start;
          -- Wait to the suppose time.
+         delay until Next_Cycle_Should_Start;
+         -- Wait until next sine start
          delay until Next_Cycle_Start;
       end loop;
    end Signal_Generator;
