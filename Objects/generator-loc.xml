@@ -1,170 +1,401 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_file>
+    <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/discovery_board/discovery_board-button.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 24" line=" 160" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 73" line=" 24" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/discovery_board/discovery_board-button.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 58" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 4" line=" 37" >
+      <vfs_project />
+      <vfs_file>/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 78" line=" 160" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 47" line=" 118" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 83" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 120" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 113" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 120" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 113" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 120" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 120" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 109" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 113" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 13" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 66" line=" 89" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 34" line=" 89" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
     <file_marker column=" 4" line=" 88" >
       <vfs_project />
-      <vfs_file>/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+      <vfs_file>/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 19" line=" 49" >
+    <file_marker column=" 23" line=" 139" >
       <vfs_project />
-      <vfs_file>/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+      <vfs_file>/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/last_chance_handler.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/last_chance_handler.ads</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/last_chance_handler.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 66" line=" 89" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 49" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 44" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 116" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 90" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 126" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/discovery_board/discovery_board-button.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 9" line=" 14" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    <file_marker column=" 7" line=" 90" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 170" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 154" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 172" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 154" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 162" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-config.ads</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 67" line=" 89" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    <file_marker column=" 7" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 85" line=" 230" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 30" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-general_purpose_ios.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 226" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 7" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/anu_base_board/anu_base_board.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 228" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 21" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/anu_base_board/anu_base_board-config.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 60" line=" 90" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
     <file_marker column=" 4" line=" 88" >
       <vfs_project />
-      <vfs_file>/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+      <vfs_file>/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 68" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 34" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/anu_base_board/anu_base_board-config.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 14" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-system_configuration_controller-ops.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-system_configuration_controller-ops.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 51" line=" 26" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-system_configuration_controller-ops.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-system_configuration_controller.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 29" >
+      <vfs_project />
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-interrupts_and_events-ops.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 16" >
+      <vfs_project />
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-interrupts_and_events-ops.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 29" >
+      <vfs_project />
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/stm32f4/stm32f4-interrupts_and_events-ops.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/anu_base_board/anu_base_board-config.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 12" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 9" line=" 7" >
-      <vfs_project>/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
-      <vfs_file>/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board.ads</vfs_file>
+    <file_marker column=" 54" line=" 91" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 21" line=" 13" >
+      <vfs_project>/students/u5870415/COMP4330/Generator/Generator (copy)/generator.gpr</vfs_project>
+      <vfs_file>/students/u5870415/COMP4330/Generator/Generator (copy)/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 160">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 58">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 78" line=" 160">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 118">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 83">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 120">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 113">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 120">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 113">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 120">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 120">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 109">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 113">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 13">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 66" line=" 89">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 88">
+      <vfs_project  />
+      <vfs_file >/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 49">
+      <vfs_project  />
+      <vfs_file >/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/last_chance_handler.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/last_chance_handler.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 66" line=" 89">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 14">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-config.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 67" line=" 89">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/generator_controllers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 88">
+      <vfs_project  />
+      <vfs_file >/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/gnarl/a-intnam.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 14">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 12">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board-com_interface.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 9" line=" 7">
+      <vfs_project >/home/saki/Documents/assignment/COMP4330Assi1/generator.gpr</vfs_project>
+      <vfs_file >/home/saki/Documents/assignment/COMP4330Assi1/Sources/anu_base_board/anu_base_board.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >
