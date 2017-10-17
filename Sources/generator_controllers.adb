@@ -52,6 +52,9 @@ package body Generator_Controllers is
    Sine_Single_Period_Value : Integer := 1000 / Signal_Frequency;
    Sine_Single_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value);
    Calc_Signal_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value / Sample_Frequency);
+   Current_Cycle_Start : Time := System_Start;
+   Next_Cycle_Should_Start : Time := System_Start;
+   Next_Cycle_Start : Time := System_Start;
 
    -- Sine calcuation.
    function Sine_Level (Base_X : Float; X_Square : Float; Level : Sine_Taylor_Level) return Float is
@@ -128,14 +131,21 @@ package body Generator_Controllers is
      Priority     => Default_Priority;
 
    task body Signal_Generator is
-      Next_Sine_Start : Time := System_Start + Sine_Single_Period;
       Next_Sample_Start : Time := System_Start;
       Sine_Sample : Float := 0.0;
       Sine_X : Float := 0.0;
    begin
       loop
+         -- Update the current cycle start time.
+         Current_Cycle_Start := Clock;
+         -- Calculate the suppose start time.
+         Next_Cycle_Should_Start := Current_Cycle_Start + Sine_Single_Period;
+         -- Update the start time.
+         Next_Cycle_Start := Next_Cycle_Should_Start;
          -- Reset the sine x.
          Sine_X := 0.0;
+         -- Initial the next sample start time.
+         Next_Sample_Start := Current_Cycle_Start;
          for Detect_Time in Sample_Range loop
             Next_Sample_Start := Next_Sample_Start + Calc_Signal_Period;
             -- Calculate the sample.
@@ -158,9 +168,9 @@ package body Generator_Controllers is
             delay until Next_Sample_Start;
          end loop;
          -- Wait until next sine start
-         delay until Next_Sine_Start;
-         -- Calculate the new start time.
-         Next_Sine_Start := System_Start + Sine_Single_Period;
+         delay until Next_Cycle_Should_Start;
+         -- Wait to the suppose time.
+         delay until Next_Cycle_Start;
       end loop;
    end Signal_Generator;
 
