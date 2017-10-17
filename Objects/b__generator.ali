@@ -28,17 +28,17 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__generator.adb	a6ac5a68 NE OO PK IL
+U ada_main%b		b__generator.adb	099ec925 NE OO PK IL
 W system%s		system.ads		system.ali
 
 U ada_main%s		b__generator.ads	a5c63b47 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
-D b__generator.ads	20171017044443 c323a782 ada_main%s
-D b__generator.adb	20171017044443 658ffdea ada_main%b
+D b__generator.ads	20171017081417 c323a782 ada_main%s
+D b__generator.adb	20171017081418 cabd6ea7 ada_main%b
 D system.ads		20170517144320 66e59cc5 system%s
 X 1 b__generator.ads
-5K9*ada_main 143l5 143e13 2|7b14 123l5 123t13
+5K9*ada_main 145l5 145e13 2|7b14 123l5 123t13
 8a4*GNAT_Version{string} 10r22
 12a4*Ada_Main_Program_Name{string} 13r22 2|81r52
 15U14*adainit 16i<c,adainit>22 2|27b14 75l8 75t15 85s7
@@ -49,15 +49,15 @@ X 2 b__generator.adb
 11i4 E102{short_integer} 11m46 11r46 51m7 51r15
 12i4 E096{short_integer} 12m46 12r46 53m7 53r15
 13i4 E075{short_integer} 13m46 13r46 55m7 55r15
-14i4 E110{short_integer} 14m46 14r46 56m7 56r15
-15i4 E116{short_integer} 15m46 15r46 57m7 57r15
-16i4 E113{short_integer} 16m46 16r46 58m7 58r15
+14i4 E112{short_integer} 14m46 14r46 56m7 56r15
+15i4 E118{short_integer} 15m46 15r46 57m7 57r15
+16i4 E115{short_integer} 16m46 16r46 58m7 58r15
 17i4 E082{short_integer} 17m46 17r46 59m7 59r15
-18i4 E107{short_integer} 18m46 18r46 61m7 61r15
+18i4 E109{short_integer} 18m46 18r46 61m7 61r15
 19i4 E073{short_integer} 19m46 19r46 62m7 62r15
 20i4 E086{short_integer} 20m46 20r46 64m7 64r15
-21i4 E119{short_integer} 21m46 21r46 65m7 65r15
-22i4 E105{short_integer} 22m46 22r46 67m7 67r15
+21i4 E121{short_integer} 21m46 21r46 65m7 65r15
+22i4 E107{short_integer} 22m46 22r46 67m7 67r15
 23i4 E067{short_integer} 23m46 23r46 69m7 69r15
 24i4 E089{short_integer} 24m46 24r46 71m7 71r15
 28i7*Main_Priority{integer} 29m25 29r25 43m7
