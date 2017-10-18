@@ -58,40 +58,22 @@ package body Generator_Controllers is
    Next_Cycle_Should_Start : Time := System_Start;
    Next_Cycle_Start : Time := System_Start;
 
-   -- Sine calcuation.
-   function Sine_Level (Base_X : Float; X_Square : Float; Level : Sine_Taylor_Level) return Float is
-      Current_Base_X : constant Float := Base_X * X_Square;
-      Current_Level_Result : constant Float := Current_Base_X * Sine_Taylor_Parameters (Level);
-   begin
-      if Level = Sine_Taylor_Level'Last then
-         return Current_Level_Result;
-      else
-         return Current_Level_Result + Sine_Level (Base_X => Current_Base_X,
-                                                   X_Square => X_Square,
-                                                   Level => Sine_Taylor_Level'Succ (Level));
-      end if;
-   end Sine_Level;
-
-   function Sine (X : Float) return Float is
-      Real_X : constant Float := PI_D * X;
-   begin
-      return Real_X + Sine_Level (Base_X => Real_X,
-                                  X_Square => Real_X * Real_X,
-                                  Level => Sine_Taylor_Level'First);
-   end Sine;
-
    Com_Ports_Semaphore : array (Com_Ports) of Suspension_Object;
 
-   LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
+   -- LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
 
+   -- *********** Com Port Receiver ***********
+   -- Port interrupt
    protected Com_Port_Reader with Interrupt_Priority => Interrupt_Priority'Last is
    private
       procedure Interrupt_Handler;
+      -- All the Com Port are using the same interrupt handler.
       pragma Attach_Handler (Interrupt_Handler, EXTI9_5_Interrupt);
       pragma Attach_Handler (Interrupt_Handler, EXTI15_10_Interrupt);
       pragma Attach_Handler (Interrupt_Handler, EXTI2_Interrupt);
       pragma Unreferenced (Interrupt_Handler);
    end Com_Port_Reader;
+   pragma Unreferenced (Com_Port_Reader);
 
    protected body Com_Port_Reader is
       procedure Interrupt_Handler is
@@ -107,70 +89,90 @@ package body Generator_Controllers is
       end Interrupt_Handler;
    end Com_Port_Reader;
 
-   procedure Com_Port_Check (Com_Port_Id : Com_Ports) is
+   -- Port receiver.
+   task type Com_Port_Receiver (Com_Port_Id : Com_Ports) with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Receiver is
       Arrived_Cycle_Time : Time_Span;
    begin
-      -- Wait for the first signal.
-      Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
-      -- Toggle.
-      On ((Com_Port_Id, L));
-      -- Calculate the arrived period time.
-      Arrived_Cycle_Time := Clock - Current_Cycle_Start;
-      -- Update the offset time.
-      if Arrived_Cycle_Time < Half_Single_Period then
-         -- Only offset the one after current.
-         Next_Cycle_Start := Next_Cycle_Should_Start + Arrived_Cycle_Time;
+      loop
+         -- Wait for the first signal.
+         Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
+         -- Toggle.
+         On ((Com_Port_Id, L));
+         -- Calculate the arrived period time.
+         Arrived_Cycle_Time := Clock - Current_Cycle_Start;
+         -- Update the offset time.
+         if Arrived_Cycle_Time < Half_Single_Period then
+            -- Only offset the one after current.
+            Next_Cycle_Start := Next_Cycle_Should_Start + Arrived_Cycle_Time;
+         end if;
+      end loop;
+   end Com_Port_Receiver;
+
+   -- Each port has a receiver.
+   Com_Port_Receiver_One   : Com_Port_Receiver (1);
+   Com_Port_Receiver_Two   : Com_Port_Receiver (2);
+   Com_Port_Receiver_Three : Com_Port_Receiver (3);
+   Com_Port_Receiver_Four  : Com_Port_Receiver (4);
+
+   -- *********** Sender ***********
+   procedure Com_Port_Sender (Is_Zero : Boolean) is
+   begin
+      -- Simply check the data we need to send, enable and disable all the ports.
+      if Is_Zero then
+         -- Disable all the ports.
+         for Port in Com_Ports'First .. Com_Ports'Last loop
+            Reset  (Port);
+            Off ((Port, R));
+         end loop;
+      else
+         -- Enable all the ports.
+         for Port in Com_Ports'First .. Com_Ports'Last loop
+            Set  (Port);
+            On ((Port, R));
+         end loop;
       end if;
-   end Com_Port_Check;
+   end Com_Port_Sender;
 
-   task Com_Port_Checker_One with
-     Storage_Size => 4 * 1024,
-     Priority     => Default_Priority;
-
-   task body Com_Port_Checker_One is
+   -- *********** Generator ***********
+   -- Sine calcuation, this function calculate a single level.
+   -- For a single level means the current level value + all the other levels.
+   -- e.g. The second level is (^ means power):
+   --     (-1)^1/3! * x^3 + all the other levels
+   -- For the constant part it stores in the Sine_Taylor_Parameters. To get a
+   -- complete cycle, it should be calculate until 19!, which is the 9th level.
+   -- Also it need the previous calculation result and the x^2. So the current
+   -- level result is:
+   --     Parameter(i) * (Previous level result) * x^2 + all the other levels.
+   function Sine_Level (Base_X : Float; X_Square : Float; Level : Sine_Taylor_Level) return Float is
+      Current_Base_X : constant Float := Base_X * X_Square;
+      Current_Level_Result : constant Float := Current_Base_X * Sine_Taylor_Parameters (Level);
    begin
-      loop
-         -- Check the com port.
-         Com_Port_Check (1);
-      end loop;
-   end Com_Port_Checker_One;
+      if Level = Sine_Taylor_Level'Last then
+         return Current_Level_Result;
+      else
+         return Current_Level_Result + Sine_Level (Base_X => Current_Base_X,
+                                                   X_Square => X_Square,
+                                                   Level => Sine_Taylor_Level'Succ (Level));
+      end if;
+   end Sine_Level;
 
-   task Com_Port_Checker_Two with
-     Storage_Size => 4 * 1024,
-     Priority     => Default_Priority;
-
-   task body Com_Port_Checker_Two is
+   -- Taylor expansion.
+   -- This function calculate the sin(x). The initial part is
+   --    f(x) = x + (all the other levels)
+   -- The other levels calculated by Sine_Level function.
+   function Sine (X : Float) return Float is
+      Real_X : constant Float := PI_D * X;
    begin
-      loop
-         -- Check the com port.
-         Com_Port_Check (2);
-      end loop;
-   end Com_Port_Checker_Two;
+      return Real_X + Sine_Level (Base_X => Real_X,
+                                  X_Square => Real_X * Real_X,
+                                  Level => Sine_Taylor_Level'First);
+   end Sine;
 
-   task Com_Port_Checker_Three with
-     Storage_Size => 4 * 1024,
-     Priority     => Default_Priority;
-
-   task body Com_Port_Checker_Three is
-   begin
-      loop
-         -- Check the com port.
-         Com_Port_Check (3);
-      end loop;
-   end Com_Port_Checker_Three;
-
-   task Com_Port_Checker_Four with
-     Storage_Size => 4 * 1024,
-     Priority     => Default_Priority;
-
-   task body Com_Port_Checker_Four is
-   begin
-      loop
-         -- Check the com port.
-         Com_Port_Check (4);
-      end loop;
-   end Com_Port_Checker_Four;
-
+   -- Generator task
    task Signal_Generator with
      Storage_Size => 4 * 1024,
      Priority     => Default_Priority;
@@ -197,18 +199,8 @@ package body Generator_Controllers is
             -- Calculate the sample.
             Sine_Sample := Sine (Sine_X);
             Sine_X := Sine_X + Sample_X_Slide;
-            -- Update the light, write the signal.
-            if Sine_Sample < 0.0 then
-               for Port in Com_Ports'First .. Com_Ports'Last loop
-                  Reset  (Port);
-                  Off ((Port, R));
-               end loop;
-            else
-               for Port in Com_Ports'First .. Com_Ports'Last loop
-                  Set  (Port);
-                  On ((Port, R));
-               end loop;
-            end if;
+            -- Send the data.
+            Com_Port_Sender (Sine_Sample < 0.0);
             -- Time limitation for one single sample.
             delay until Next_Sample_Start;
          end loop;

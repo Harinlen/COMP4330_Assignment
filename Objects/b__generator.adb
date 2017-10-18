@@ -87,34 +87,34 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/anu_base_board.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/discovery_board.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-general_purpose_ios.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/discovery_board-config.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-general_purpose_ios-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-interrupts_and_events.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-interrupts_and_events-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-random_number_generator.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-random_number_generator-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-reset_and_clock_control.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-system_configuration_controller.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-system_configuration_controller-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-timers.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-reset_and_clock_control-ops.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/discovery_board-button.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/led_handling.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/discovery_board-led_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/last_chance_handler.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/stm32f4-usart.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/anu_base_board-config.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/anu_base_board-com_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/anu_base_board-led_interface.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/generator_controllers.o
-   --   /students/u5870415/COMP4330/Generator/Generator (copy)/Objects/generator.o
-   --   -L/students/u5870415/COMP4330/Generator/Generator (copy)/Objects/
-   --   -L/students/u5870415/COMP4330/Generator/Generator (copy)/Objects/
-   --   -L/lab/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/adalib/
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/anu_base_board.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/discovery_board.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-general_purpose_ios.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/discovery_board-config.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-general_purpose_ios-ops.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-interrupts_and_events.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-interrupts_and_events-ops.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-random_number_generator.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-random_number_generator-ops.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-reset_and_clock_control.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-system_configuration_controller.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-system_configuration_controller-ops.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-timers.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-reset_and_clock_control-ops.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/discovery_board-button.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/led_handling.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/discovery_board-led_interface.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/last_chance_handler.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/stm32f4-usart.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/anu_base_board-config.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/anu_base_board-com_interface.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/anu_base_board-led_interface.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/generator_controllers.o
+   --   /home/saki/Documents/assignment/COMP4330Assi1/Objects/generator.o
+   --   -L/home/saki/Documents/assignment/COMP4330Assi1/Objects/
+   --   -L/home/saki/Documents/assignment/COMP4330Assi1/Objects/
+   --   -L/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat
