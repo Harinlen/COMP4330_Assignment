@@ -34,8 +34,8 @@ W system%s		system.ads		system.ali
 U ada_main%s		b__generator.ads	a5c63b47 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
-D b__generator.ads	20171020015538 c323a782 ada_main%s
-D b__generator.adb	20171020015538 5cc6a644 ada_main%b
+D b__generator.ads	20171020041058 c323a782 ada_main%s
+D b__generator.adb	20171020041058 5cc6a644 ada_main%b
 D system.ads		20170517220734 66e59cc5 system%s
 X 1 b__generator.ads
 5K9*ada_main 140l5 140e13 2|7b14 115l5 115t13
