@@ -1,7 +1,7 @@
 V "GNAT Lib v2017"
 A -O2
 A -gnatA
-A --RTS=/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A --RTS=C:\gnat\2017\arm-eabi\lib\gnat\ravenscar-sfp-stm32f4\
 A -mlittle-endian
 A -mfloat-abi=hard
 A -mcpu=cortex-m4
@@ -53,6 +53,7 @@ P DB LC TF  ES ZX
 
 RN
 RV NO_DELAY
+RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
 RV NO_PROTECTED_TYPES
 RV NO_RECURSION
@@ -63,9 +64,9 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
-RV MAX_TASKS=5
+RV MAX_TASKS=6
 
-U generator_controllers%b  generator_controllers.adb  111d9a12 OO PK
+U generator_controllers%b  generator_controllers.adb  ac86fd23 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
 W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
@@ -77,17 +78,12 @@ W anu_base_board.com_interface%s  anu_base_board-com_interface.adb  anu_base_boa
 W anu_base_board.config%s  anu_base_board-config.ads  anu_base_board-config.ali
 W anu_base_board.led_interface%s  anu_base_board-led_interface.adb  anu_base_board-led_interface.ali
 W discovery_board%s	discovery_board.ads	discovery_board.ali
-W discovery_board.button%s  discovery_board-button.adb  discovery_board-button.ali
-W discovery_board.config%s  discovery_board-config.ads  discovery_board-config.ali
 W discovery_board.led_interface%s  discovery_board-led_interface.adb  discovery_board-led_interface.ali
 W interfaces%s		interfac.ads		interfac.ali
 W stm32f4%s		stm32f4.ads		stm32f4.ali
 W stm32f4.general_purpose_ios%s  stm32f4-general_purpose_ios.ads  stm32f4-general_purpose_ios.ali
-W stm32f4.general_purpose_ios.ops%s  stm32f4-general_purpose_ios-ops.adb  stm32f4-general_purpose_ios-ops.ali
 W stm32f4.interrupts_and_events%s  stm32f4-interrupts_and_events.ads  stm32f4-interrupts_and_events.ali
 W stm32f4.interrupts_and_events.ops%s  stm32f4-interrupts_and_events-ops.adb  stm32f4-interrupts_and_events-ops.ali  AD
-W stm32f4.random_number_generator%s  stm32f4-random_number_generator.ads  stm32f4-random_number_generator.ali
-W stm32f4.random_number_generator.ops%s  stm32f4-random_number_generator-ops.adb  stm32f4-random_number_generator-ops.ali
 W stm32f4.reset_and_clock_control%s  stm32f4-reset_and_clock_control.ads  stm32f4-reset_and_clock_control.ali
 W stm32f4.reset_and_clock_control.ops%s  stm32f4-reset_and_clock_control-ops.adb  stm32f4-reset_and_clock_control-ops.ali  AD
 W stm32f4.system_configuration_controller%s  stm32f4-system_configuration_controller.ads  stm32f4-system_configuration_controller.ali
@@ -104,252 +100,271 @@ W system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
 U generator_controllers%s  generator_controllers.ads  0928626a EB EE NE OO PK
 
-D ada.ads		20170517144320 76789da1 ada%s
-D a-interr.ads		20170517144320 bdf68b51 ada.interrupts%s
-D a-intnam.ads		20170517144320 cdde51a1 ada.interrupts.names%s
-D a-reatim.ads		20170517144320 bb781ad1 ada.real_time%s
-D a-reatim.adb		20170517144320 f9171193 ada.real_time%b
-D a-retide.ads		20170517144320 081cdaa4 ada.real_time.delays%s
-D a-sytaco.ads		20170517144320 cb042d0a ada.synchronous_task_control%s
-D a-taside.ads		20170517144320 c6417f71 ada.task_identification%s
-D a-unccon.ads		20170517144320 31484697 ada.unchecked_conversion%s
-D anu_base_board.ads	20171010130739 bf07bf5d anu_base_board%s
-D anu_base_board-com_interface.ads  20171010130739 35c8c540 anu_base_board.com_interface%s
-D anu_base_board-config.ads  20171010130739 27e8d7a2 anu_base_board.config%s
-D anu_base_board-led_interface.ads  20171010130739 36de7baa anu_base_board.led_interface%s
-D anu_base_board-led_interface.adb  20171010130739 852cf21e anu_base_board.led_interface%b
-D discovery_board.ads	20171010130739 0eba7ef5 discovery_board%s
-D discovery_board-button.ads  20171010130739 c4d46af4 discovery_board.button%s
-D discovery_board-config.ads  20171010130739 e77795fc discovery_board.config%s
-D discovery_board-led_interface.ads  20171010130739 ea092c57 discovery_board.led_interface%s
-D generator_controllers.ads  20171010130739 0928626a generator_controllers%s
-D generator_controllers.adb  20171018082558 936530bb generator_controllers%b
-D interfac.ads		20170517144320 5ab55268 interfaces%s
-D i-stm32.ads		20170517144320 4d2e1e9b interfaces.stm32%s
-D i-stm32-pwr.ads	20170517144320 10ed2a13 interfaces.stm32.pwr%s
-D i-stm32-rcc.ads	20170517144320 ed083a96 interfaces.stm32.rcc%s
-D led_handling.ads	20171010130739 8bf2f877 led_handling%s
-D stm32f4.ads		20171010130739 851d0fef stm32f4%s
-D stm32f4-general_purpose_ios.ads  20171010130739 8ea76b2b stm32f4.general_purpose_ios%s
-D stm32f4-general_purpose_ios-ops.ads  20171010130739 9c2ed444 stm32f4.general_purpose_ios.ops%s
-D stm32f4-interrupts_and_events.ads  20171010130739 1048ec44 stm32f4.interrupts_and_events%s
-D stm32f4-interrupts_and_events-ops.ads  20171010130739 bd9c0c83 stm32f4.interrupts_and_events.ops%s
-D stm32f4-interrupts_and_events-ops.adb  20171010130739 4080f063 stm32f4.interrupts_and_events.ops%b
-D stm32f4-random_number_generator.ads  20171010130739 bd2c35ee stm32f4.random_number_generator%s
-D stm32f4-random_number_generator-ops.ads  20171010130739 cb0ad0c3 stm32f4.random_number_generator.ops%s
-D stm32f4-reset_and_clock_control.ads  20171010130739 cd9e8e6c stm32f4.reset_and_clock_control%s
-D stm32f4-reset_and_clock_control-ops.ads  20171010130739 1e816f9e stm32f4.reset_and_clock_control.ops%s
-D stm32f4-reset_and_clock_control-ops.adb  20171010130739 8f04ff92 stm32f4.reset_and_clock_control.ops%b
-D stm32f4-system_configuration_controller.ads  20171010130739 a76a041d stm32f4.system_configuration_controller%s
-D stm32f4-system_configuration_controller-ops.ads  20171010130739 e335a6d9 stm32f4.system_configuration_controller.ops%s
-D stm32f4-timers.ads	20171010130739 dc9b3fca stm32f4.timers%s
-D stm32f4-usart.ads	20171010130739 79219e0f stm32f4.usart%s
-D system.ads		20170517144320 66e59cc5 system%s
-D s-bb.ads		20170517144320 09e072ae system.bb%s
-D s-bbbopa.ads		20170517144320 95d97b26 system.bb.board_parameters%s
-D s-bbbosu.ads		20170517144320 9b59a61f system.bb.board_support%s
-D s-bbcppr.ads		20170517144320 bcfa73ad system.bb.cpu_primitives%s
-D s-bcprmu.ads		20170517144320 043d3736 system.bb.cpu_primitives.multiprocessors%s
-D s-bbinte.ads		20170517144320 d9fc23b0 system.bb.interrupts%s
-D s-bbmcpa.ads		20170517144320 c4c55388 system.bb.mcu_parameters%s
-D s-bbpara.ads		20170517144320 77379e7b system.bb.parameters%s
-D s-bbthre.ads		20170517144320 d6c36e4f system.bb.threads%s
-D s-bbthqu.ads		20170517144320 db3cad46 system.bb.threads.queues%s
-D s-bbtime.ads		20170517144320 ad086247 system.bb.time%s
-D s-fatflt.ads		20170517144320 11beb392 system.fat_flt%s
-D s-fatgen.ads		20170517144320 49cbaf86 system.fat_gen%s
-D s-fatgen.adb		20170517144320 de7895ec system.fat_gen%b
-D s-interr.ads		20170517144320 36300b98 system.interrupts%s
-D s-multip.ads		20170517144320 f33e0e35 system.multiprocessors%s
-D s-mufalo.ads		20170517144320 3dca0374 system.multiprocessors.fair_locks%s
-D s-musplo.ads		20170517144320 69fa25c4 system.multiprocessors.spin_locks%s
-D s-osinte.ads		20170517144320 2d4f0621 system.os_interface%s
-D s-parame.ads		20170517144320 c9fe535f system.parameters%s
-D s-stm32.ads		20170517144320 e898dba2 system.stm32%s
-D s-stoele.ads		20170517144320 2dc34a04 system.storage_elements%s
-D s-tasinf.ads		20170517144320 801abd01 system.task_info%s
-D s-taspri.ads		20170517144320 351848fa system.task_primitives%s
-D s-taprop.ads		20170517144320 5013f316 system.task_primitives.operations%s
-D s-taskin.ads		20170517144320 2a4da085 system.tasking%s
-D s-taprob.ads		20170517144320 c8fc0753 system.tasking.protected_objects%s
-D s-tposen.ads		20170517144320 9e6a8286 system.tasking.protected_objects.single_entry%s
-D s-tasres.ads		20170517144320 0c8ef6fb system.tasking.restricted%s
-D s-tarest.ads		20170517144320 4cbcd33f system.tasking.restricted.stages%s
-D s-unstyp.ads		20170517144320 34867c83 system.unsigned_types%s
-D /home/saki/Documents/assignment/COMP4330Assi1/gnat.adc  20171010130739 00000000
+D ada.ads		20170517220732 76789da1 ada%s
+D a-interr.ads		20170517220734 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20170517220734 cdde51a1 ada.interrupts.names%s
+D a-reatim.ads		20170517220734 bb781ad1 ada.real_time%s
+D a-reatim.adb		20170517220734 f9171193 ada.real_time%b
+D a-retide.ads		20170517220734 081cdaa4 ada.real_time.delays%s
+D a-sytaco.ads		20170517220734 cb042d0a ada.synchronous_task_control%s
+D a-taside.ads		20170517220734 c6417f71 ada.task_identification%s
+D a-unccon.ads		20170517220732 31484697 ada.unchecked_conversion%s
+D anu_base_board.ads	20171017050350 bf07bf5d anu_base_board%s
+D anu_base_board-com_interface.ads  20171017050350 35c8c540 anu_base_board.com_interface%s
+D anu_base_board-config.ads  20171017050350 27e8d7a2 anu_base_board.config%s
+D anu_base_board-led_interface.ads  20171017050350 36de7baa anu_base_board.led_interface%s
+D anu_base_board-led_interface.adb  20171017050350 852cf21e anu_base_board.led_interface%b
+D discovery_board.ads	20171017050350 0eba7ef5 discovery_board%s
+D discovery_board-config.ads  20171017050350 e77795fc discovery_board.config%s
+D discovery_board-led_interface.ads  20171017050350 ea092c57 discovery_board.led_interface%s
+D discovery_board-led_interface.adb  20171017050350 a153647f discovery_board.led_interface%b
+D generator_controllers.ads  20171017060456 0928626a generator_controllers%s
+D generator_controllers.adb  20171020015538 5a79ac05 generator_controllers%b
+D interfac.ads		20170517220732 5ab55268 interfaces%s
+D i-stm32.ads		20170517220734 4d2e1e9b interfaces.stm32%s
+D i-stm32-pwr.ads	20170517220734 10ed2a13 interfaces.stm32.pwr%s
+D i-stm32-rcc.ads	20170517220734 ed083a96 interfaces.stm32.rcc%s
+D led_handling.ads	20171017050350 8bf2f877 led_handling%s
+D stm32f4.ads		20171017050350 851d0fef stm32f4%s
+D stm32f4-general_purpose_ios.ads  20171017050350 8ea76b2b stm32f4.general_purpose_ios%s
+D stm32f4-general_purpose_ios-ops.ads  20171017050350 9c2ed444 stm32f4.general_purpose_ios.ops%s
+D stm32f4-interrupts_and_events.ads  20171017050350 1048ec44 stm32f4.interrupts_and_events%s
+D stm32f4-interrupts_and_events-ops.ads  20171017050350 bd9c0c83 stm32f4.interrupts_and_events.ops%s
+D stm32f4-interrupts_and_events-ops.adb  20171017050350 4080f063 stm32f4.interrupts_and_events.ops%b
+D stm32f4-reset_and_clock_control.ads  20171017050350 cd9e8e6c stm32f4.reset_and_clock_control%s
+D stm32f4-reset_and_clock_control-ops.ads  20171017050350 1e816f9e stm32f4.reset_and_clock_control.ops%s
+D stm32f4-reset_and_clock_control-ops.adb  20171017050350 8f04ff92 stm32f4.reset_and_clock_control.ops%b
+D stm32f4-system_configuration_controller.ads  20171017050350 a76a041d stm32f4.system_configuration_controller%s
+D stm32f4-system_configuration_controller-ops.ads  20171017050350 e335a6d9 stm32f4.system_configuration_controller.ops%s
+D stm32f4-timers.ads	20171017050350 dc9b3fca stm32f4.timers%s
+D stm32f4-usart.ads	20171017050350 79219e0f stm32f4.usart%s
+D system.ads		20170517220734 66e59cc5 system%s
+D s-bb.ads		20170517220732 09e072ae system.bb%s
+D s-bbbopa.ads		20170517220734 95d97b26 system.bb.board_parameters%s
+D s-bbbosu.ads		20170517220734 9b59a61f system.bb.board_support%s
+D s-bbcppr.ads		20170517220734 bcfa73ad system.bb.cpu_primitives%s
+D s-bcprmu.ads		20170517220734 043d3736 system.bb.cpu_primitives.multiprocessors%s
+D s-bbinte.ads		20170517220734 d9fc23b0 system.bb.interrupts%s
+D s-bbmcpa.ads		20170517220734 c4c55388 system.bb.mcu_parameters%s
+D s-bbpara.ads		20170517220734 77379e7b system.bb.parameters%s
+D s-bbthre.ads		20170517220734 d6c36e4f system.bb.threads%s
+D s-bbthqu.ads		20170517220734 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20170517220734 ad086247 system.bb.time%s
+D s-fatflt.ads		20170517220734 11beb392 system.fat_flt%s
+D s-fatgen.ads		20170517220734 49cbaf86 system.fat_gen%s
+D s-fatgen.adb		20170517220734 de7895ec system.fat_gen%b
+D s-interr.ads		20170517220734 36300b98 system.interrupts%s
+D s-multip.ads		20170517220734 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20170517220734 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20170517220734 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20170517220734 2d4f0621 system.os_interface%s
+D s-parame.ads		20170517220734 c9fe535f system.parameters%s
+D s-stm32.ads		20170517220734 e898dba2 system.stm32%s
+D s-stoele.ads		20170517220732 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20170517220734 801abd01 system.task_info%s
+D s-taspri.ads		20170517220734 351848fa system.task_primitives%s
+D s-taprop.ads		20170517220734 5013f316 system.task_primitives.operations%s
+D s-taskin.ads		20170517220734 2a4da085 system.tasking%s
+D s-taprob.ads		20170517220734 c8fc0753 system.tasking.protected_objects%s
+D s-tposen.ads		20170517220734 9e6a8286 system.tasking.protected_objects.single_entry%s
+D s-tasres.ads		20170517220734 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20170517220734 4cbcd33f system.tasking.restricted.stages%s
+D s-unstyp.ads		20170517220732 34867c83 system.unsigned_types%s
+D c:\users\u6013763\documents\comp4330assi1\gnat.adc  20171017050350 00000000
 X 1 ada.ads
 16K9*Ada 20e8 20|5r6 5r55 6r6 6r55 7r6 7r55
 X 2 a-interr.ads
 40K13*Interrupts 100e19 20|5r10 5r59
-42I9*Interrupt_ID<56|61I9>
+42I9*Interrupt_ID<54|61I9>
 X 3 a-intnam.ads
 8K24*Names 261e25 20|5w21 5r70
-43i4*EXTI2_Interrupt{2|42I9} 20|73r49
-88i4*EXTI9_5_Interrupt{2|42I9} 20|71r49
-139i4*EXTI15_10_Interrupt{2|42I9} 20|72r49
+43i4*EXTI2_Interrupt{2|42I9} 20|80r49
+88i4*EXTI9_5_Interrupt{2|42I9} 20|78r49
+139i4*EXTI15_10_Interrupt{2|42I9} 20|79r49
 X 4 a-reatim.ads
 41K13*Real_Time 155e18 20|6w10 6r59
-53M9*Time<52|46M9> 20|52r28 57r26 58r30 59r23 181r27
-63I9*Time_Span<52|81I9> 20|54r34 55r34 56r34 98r28
-70V13*Clock{53M9}<52|134p13> 20|52s36 106s32 187s33
-74V14*"+"{53M9} 20|110s57 189s57 198s52
-76V14*"-"{63I9} 20|106s38
-92V14*"/"{63I9} 20|55s66
-96V14*"<"{boolean} 20|108r32
-106V13*Milliseconds{63I9} 20|54s47 56s47
+53M9*Time<50|46M9> 20|53r28 61r26 62r30 63r23 116r22 192r29 244r59 244r82
+. 255r30 256r27 257r27
+63I9*Time_Span<50|81I9> 20|55r34 57r34 58r34 60r34 68r45 117r28
+70V13*Clock{53M9}<50|134p13> 20|53s36 123s26 264s33
+74V14*"+"{53M9} 20|135s60 198s53 247s34 268s57 278s55
+76V14*"-"{63I9} 20|131s48 157s61
+87V14*"-"{63I9} 20|145s38
+92V14*"/"{63I9} 20|58s66
+96V14*"<"{boolean} 20|133r35 136r38 145r59
+101V13*To_Duration{duration} 20|101s49 101s105
+104V13*Nanoseconds{63I9} 20|55s47 57s47 60s47 198s55 247s36
 X 7 a-sytaco.ads
 42K13*Synchronous_Task_Control 94e33 20|7w10 7r59
-48W9*Suspension_Object 92e25 20|61r47
-51U14*Set_True 20|86s16
-51w24 S{48W9} 20|86r33
-65U14*Suspend_Until_True 20|102s10
-65w34 S{48W9} 20|102r30
+48W9*Suspension_Object 92e25 20|65r23 67r47
+51U14*Set_True 20|93s16 266s10
+51w24 S{48W9} 20|93r33
+65U14*Suspend_Until_True 20|121s10 196s10
+65w34 S{48W9} 20|121r30 196r30
 X 10 anu_base_board.ads
 5K9*ANU_Base_Board 34e19 20|8w6 8r55 9r6 9r55 10r6 10r55 11r6 11r55
-7I9*Com_Ports<short_short_integer> 20|61r33 82r22 93r47 127r22 127r41 133r22
-. 133r41 218r19
-11e4*L=11:27{9E9} 20|104r28
-12e4*R=12:27{9E9} 20|129r25 135r24
-16e4*Rx=16:32{14E9} 20|83r46 220r43
-22e4*Da=22:30{19E9} 20|83r50 220r47
+7I9*Com_Ports<short_short_integer> 20|67r33 68r31 89r22 100r51 111r47 174r22
+. 174r41 180r22 180r41 303r19
+11e4*L=11:27{9E9} 20|128r35
+12e4*R=12:27{9E9} 20|176r24 182r25
+16e4*Rx=16:32{14E9} 20|90r46 305r43
+22e4*Da=22:30{19E9} 20|90r50 305r47
 X 11 anu_base_board-com_interface.ads
 7K24*Com_Interface 17e33 20|10w21 10r70
-11U14*Set 20|134s13
-12U14*Reset 20|128s13
+11U14*Set 20|175s13
+12U14*Reset 20|181s13
+15V13*Read{26|14M9} 20|125s13
 X 12 anu_base_board-config.ads
 8K24*Config 48e26 20|9w21 9r70
-21a4*Com_Wires(27|28R9) 20|83r29 220r26
+21a4*Com_Wires(27|28R9) 20|90r29 305r26
 X 13 anu_base_board-led_interface.ads
 5K24*LED_Interface 17e33 20|11w21 11r70
-9U14*On 20|104s10 135s13
-10U14*Off 20|129s13
+9U14*On 20|176s13
+10U14*Off 20|182s13
+15U14*Toggle 20|128s13
 X 15 discovery_board.ads
-5K9*Discovery_Board 9e20 20|12w6 12r55 13r6 13r55 14r6 14r55 15r6 15r55
-X 16 discovery_board-button.ads
-5K25*Button 13e27 20|13w22 13r71
-X 17 discovery_board-config.ads
-7K25*Config 17e27 20|14w22 14r71
-X 18 discovery_board-led_interface.ads
+5K9*Discovery_Board 9e20 20|12w6 12r55 15r6 15r55
+7n18*Green{7E9} 20|138r23 142r24 147r23 151r24
+7n25*Orange{7E9} 20|105r14 107r15
+7n33*Red{7E9} 20|129r21 262r18
+7n38*Blue{7E9} 20|284r17 286r18
+X 17 discovery_board-led_interface.ads
 5K25*LED_Interface 24e34 20|15w22 15r71
+9U14*On 20|105s10 138s19 147s19 284s13
+10U14*Off 20|107s10 142s19 151s19 286s13
+15U14*Toggle 20|129s13 262s10
 X 19 generator_controllers.ads
-5K9*Generator_Controllers 10l5 10e26 20|27b14 231l5 231t26
+5K9*Generator_Controllers 10l5 10e26 20|27b14 316l5 316t26
 X 20 generator_controllers.adb
-30i4 Signal_Frequency{integer} 53r58
-31i4 Sample_Frequency{integer} 48r52 49r36 56r88
-34f4 PI{float} 35r29
-35f4 PI_D{float} 168r34
-36I9 Sine_Taylor_Level<short_short_integer> 37r45 150r67 154r18 159r61 172r44
-37a4 Sine_Taylor_Parameters(float) 152r65
-48f4 Sample_X_Slide{float} 201r32
-49I9 Sample_Range<short_short_integer> 197r29
-52m4 System_Start{4|53M9} 57r34 58r38 59r31 181r35
-53i4 Sine_Single_Period_Value{integer} 54r61 56r61
-54i4 Sine_Single_Period{4|63I9} 55r47 189r59
-55i4 Half_Single_Period{4|63I9} 108r34
-56i4 Calc_Signal_Period{4|63I9} 198r54
-57m4 Current_Cycle_Start{4|53M9} 106r40 187m10 189r37 195r31
-58m4 Next_Cycle_Should_Start{4|53M9} 110r33 189m10 191r30 208r22
-59m4 Next_Cycle_Start{4|53M9} 110m13 191m10 210r22
-61a4 Com_Ports_Semaphore(7|48W9) 86m38 86r38 102m35 102r35
-67w14 Com_Port_Reader 76r25 78b19 90l8 90t23
-69U17 Interrupt_Handler 71r30 72r30 73r30 74r28 79b17 89l11 89t28
-80r10 Com_Port_Pin{27|28R9} 83m13 84r26 85r41
-82i14 Port{10|7I9} 83r40 86r59
-93T14 Com_Port_Receiver 93d33 97b14 113l8 113t25 116r30 117r30 118r30 119r30
-93i33 Com_Port_Id{10|7I9} 102r56 104r15
-98i7 Arrived_Cycle_Time{4|63I9} 106m10 108r13 110r59
-116t4 Com_Port_Receiver_One{93T14}
-117t4 Com_Port_Receiver_Two{93T14}
-118t4 Com_Port_Receiver_Three{93T14}
-119t4 Com_Port_Receiver_Four{93T14}
-122U14 Com_Port_Sender 122b14 122>31 138l8 138t23 203s13
-122b31 Is_Zero{boolean} 125r10
-127i14 Port<short_short_integer> 128r21 129r19
-133i14 Port<short_short_integer> 134r19 135r18
-150V13 Sine_Level{float} 150b13 150>25 150>41 150>59 157s40 161l8 161t18
-. 170s23
-150f25 Base_X{float} 151r42 157r52 170r35
-150f41 X_Square{float} 151r51 158r52 158r64 171r35
-150i59 Level{36I9} 152r89 154r10 159r52 159r85 172r35
-151f7 Current_Base_X{float} 152r48 157r62
-152f7 Current_Level_Result{float} 155r17 157r17
-167V13 Sine{float} 167b13 167>19 173l8 173t12 200s28
-167f19 X{float} 168r41
-168f7 Real_X{float} 170r14 170r45 171r47 171r56
-176t9 Signal_Generator 180b14 212l8 212t24
-181m7 Next_Sample_Start{4|53M9} 195m10 198m13 198r34 205r25
-182f7 Sine_Sample{float} 200m13 203r30
-183f7 Sine_X{float} 193m10 200r34 201m13 201r23
-197i14 Detect_Time{49I9}
-216r7 Com_Port_Pin{27|28R9} 220m10 222r71 223r40 224r34 227r27
-218i11 Port{10|7I9} 220r37
+30i4 Signal_Frequency{integer} 56r64
+31i4 Sample_Frequency{integer} 49r52 50r36 59r71
+32f4 Send_Value{float} 198r112
+35f4 PI{float} 36r29
+36f4 PI_D{float} 236r34
+37I9 Sine_Taylor_Level<short_short_integer> 38r45 218r67 222r18 227r61 240r44
+38a4 Sine_Taylor_Parameters(float) 220r65
+49f4 Sample_X_Slide{float} 281r32
+50I9 Sample_Range<short_short_integer> 276r29
+53m4 System_Start{4|53M9} 61r34 62r38 63r31 255r38 256r35 257r35
+54i4 Sync_Available_Offset{integer} 55r60
+55i4 Sync_Offset_Period{4|63I9} 136r40 145r61
+56i4 Sine_Single_Period_Value{integer} 57r60 59r44 198r84
+57i4 Sine_Single_Period{4|63I9} 58r47 101r118 145r19 268r59
+58i4 Half_Single_Period{4|63I9} 133r37
+59i4 Calc_Signal_Slide{integer} 60r60 247r65
+60i4 Calc_Signal_Period{4|63I9} 278r57
+61m4 Current_Cycle_Start{4|53M9} 131r50 157r63 198r33 264m10 268r37 274r34
+62m4 Next_Cycle_Should_Start{4|53M9} 135r36 268m10 270r30 293r22
+63m4 Next_Cycle_Start{4|53M9} 135m16 270m10 295r22
+65w4 Sine_Cycle_Start{7|48W9} 196m35 196r35 266m20 266r20
+67a4 Com_Ports_Semaphore(7|48W9) 93m38 93r38 121m35 121r35
+68a4 Com_Ports_Falling(4|63I9) 101r62 157m13
+74w14 Com_Port_Reader 83r25 85b19 97l8 97t23
+76U17 Interrupt_Handler 78r30 79r30 80r30 81r28 86b17 96l11 96t28
+87r10 Com_Port_Pin{27|28R9} 90m13 91r26 92r41
+89i14 Port{10|7I9} 90r40 93r59
+100U14 Com_Port_Receive_Data 100b14 100>37 109l8 109t29 140s19 149s19
+100i37 Com_Port_Id{10|7I9} 101r81
+101f7 Received_Value{float} 104r10
+111T14 Com_Port_Receiver 111d33 115b14 160l8 160t25 163r30 164r30 165r30
+. 166r30
+111i33 Com_Port_Id{10|7I9} 121r56 125r19 128r22 140r42 149r42 157r32
+116m7 Arrived_Time{4|53M9} 123m10 131r35 157r48
+117i7 Arrived_Cycle_Time{4|63I9} 131m13 133r16 135r62 136r19 145r40
+163t4 Com_Port_Receiver_One{111T14}
+164t4 Com_Port_Receiver_Two{111T14}
+165t4 Com_Port_Receiver_Three{111T14}
+166t4 Com_Port_Receiver_Four{111T14}
+169U14 Send_Data 169b14 169>25 185l8 185t17 200s10 204s10
+169b25 Is_One{boolean} 172r10
+174i14 Port<short_short_integer> 175r19 176r18
+180i14 Port<short_short_integer> 181r21 182r19
+187t9 Com_Port_Sender 191b14 206l8 206t23
+192m7 Data_Value_One_Time{4|53M9} 198m10 202r22
+218V13 Sine_Level{float} 218b13 218>25 218>41 218>59 225s40 229l8 229t18
+. 238s23
+218f25 Base_X{float} 219r42 225r52 238r35
+218f41 X_Square{float} 219r51 226r52 226r64 239r35
+218i59 Level{37I9} 220r89 222r10 227r52 227r85 240r35
+219f7 Current_Base_X{float} 220r48 225r62
+220f7 Current_Level_Result{float} 223r17 225r17
+235V13 Sine{float} 235b13 235>19 241l8 241t12 280s28
+235f19 X{float} 236r41
+236f7 Real_X{float} 238r14 238r45 239r47 239r56
+244U14 Dsd_Encode 244b14 244>26 244>44 244<65 248l8 248t18 283s13
+244f26 Raw_Data{float} 245r39
+244m44 Sample_Start{4|53M9} 247r21
+244m65 Zero_Start{4|53M9} 247m7
+245f7 Duty_Ratio{float} 247r86
+250t9 Signal_Generator 254b14 297l8 297t24
+255m7 Current_Sample_Start{4|53M9} 274m10 278r34 283r38 290m13
+256m7 Next_Sample_Start{4|53M9} 278m13 288r25 290r37
+257m7 Zero_Sample_Start{4|53M9} 283m60 285r25
+258f7 Sine_Sample{float} 280m13 283r25
+259f7 Sine_X{float} 272m10 280r34 281m13 281r23
+276i14 Detect_Time{50I9}
+301r7 Com_Port_Pin{27|28R9} 305m10 307r71 308r40 309r34 312r27
+303i11 Port{10|7I9} 305r37
 X 26 stm32f4.ads
-9K9*STM32F4 20|16w6 16r60 16r73 17r5 18r6 18r55 19r6 19r55 20r6 20r55 21r6
-. 21r55 22r6 22r55 23r6 23r55 24r6 24r55 26|244e12
+9K9*STM32F4 20|16w6 16r60 16r73 17r5 18r6 18r55 20r6 20r55 21r6 21r55 22r6
+. 22r55 24r6 24r55 26|244e12
 14M9*Bit 20|16r68
 45M9*Bits_32 20|16r81
 56I12*Bit_Range{natural}
-64n23*Disable{64E9} 20|226r34
-64n37*Enable{64E9} 20|225r34
-70n37*Unmasked{70E9} 20|228r28
+64n37*Enable{64E9} 20|310r34 311r34
+70n37*Unmasked{70E9} 20|313r28
 X 27 stm32f4-general_purpose_ios.ads
-11K17*General_purpose_IOs 20|18w14 18r63 19r14 19r63 27|237e32
+11K17*General_purpose_IOs 20|18w14 18r63 27|237e32
 16I12*GPIO_Pins{natural}
-28R9*Port_Pin 20|80r25 216r22 27|31e14
-29e7*Port{15E12} 20|223r53
-30i7*Pin{16I12} 20|84r39 85r54 222r84 224r47 227r40
-X 28 stm32f4-general_purpose_ios-ops.ads
-7K37*Ops 20|19w34 19r83 28|60e36
+28R9*Port_Pin 20|87r25 301r22 27|31e14
+29e7*Port{15E12} 20|308r53
+30i7*Pin{16I12} 20|91r39 92r54 307r84 309r47 312r40
 X 29 stm32f4-interrupts_and_events.ads
 11K17*Interrupts_and_Events 20|20w14 20r63 21r14 21r63 29|60e34
-15I9*External_Interrupt_No<short_short_integer> 20|222r48
+15I9*External_Interrupt_No<short_short_integer> 20|307r48
 19I12*Lines{26|56I12}
 X 30 stm32f4-interrupts_and_events-ops.ads
 9K39*Ops 20|21w36 21r85 30|19e38
-13U14*Set_Trigger 20|224s10
-13i31 Line{29|19I12} 20|224r23
-13e45 Raising{26|64E9} 20|225r23
-13e54 Falling{26|64E9} 20|226r23
-14U14*Masking 20|227s10
-14i31 Line{29|19I12} 20|227r19
-14e45 State{26|70E9} 20|228r19
-16V14*Happened{boolean} 20|84s16
-17U14*Clear_Interrupt 20|85s16
-17i31 Line{29|19I12} 20|85r33
-X 32 stm32f4-random_number_generator.ads
-11K17*Random_number_generator 20|23r14 23r63 32|72e36
-X 33 stm32f4-random_number_generator-ops.ads
-7K41*Ops 20|23w38 23r87 33|35e40
-X 34 stm32f4-reset_and_clock_control.ads
-11K17*Reset_and_clock_control 20|24r14 24r63 34|1049e36
-X 35 stm32f4-reset_and_clock_control-ops.ads
-10K41*Ops 20|24w38 24r87 35|100e40
-51n7*System_Configuration_Contr{12E9} 20|221r18
-85U14*Enable 20|221s10
-X 37 stm32f4-system_configuration_controller.ads
-12K17*System_configuration_controller 20|22r14 22r63 37|179e44
-X 38 stm32f4-system_configuration_controller-ops.ads
-9K49*Ops 20|22w46 22r95 38|14e48
-11U14*Set_Interrupt_Source 20|222s10
-11i37 Interrupt_No{29|15I9} 20|222r32
-11e75 Port{27|15E12} 20|223r32
-X 41 system.ads
-65K9*System 20|25w6 25r55 41|179e11
+13U14*Set_Trigger 20|309s10
+13i31 Line{29|19I12} 20|309r23
+13e45 Raising{26|64E9} 20|310r23
+13e54 Falling{26|64E9} 20|311r23
+14U14*Masking 20|312s10
+14i31 Line{29|19I12} 20|312r19
+14e45 State{26|70E9} 20|313r19
+16V14*Happened{boolean} 20|91s16
+17U14*Clear_Interrupt 20|92s16
+17i31 Line{29|19I12} 20|92r33
+X 32 stm32f4-reset_and_clock_control.ads
+11K17*Reset_and_clock_control 20|24r14 24r63 32|1049e36
+X 33 stm32f4-reset_and_clock_control-ops.ads
+10K41*Ops 20|24w38 24r87 33|100e40
+51n7*System_Configuration_Contr{12E9} 20|306r18
+85U14*Enable 20|306s10
+X 35 stm32f4-system_configuration_controller.ads
+12K17*System_configuration_controller 20|22r14 22r63 35|179e44
+X 36 stm32f4-system_configuration_controller-ops.ads
+9K49*Ops 20|22w46 22r95 36|14e48
+11U14*Set_Interrupt_Source 20|307s10
+11i37 Interrupt_No{29|15I9} 20|307r32
+11e75 Port{27|15E12} 20|308r32
+X 39 system.ads
+65K9*System 20|25w6 25r55 39|179e11
 95M9*Address
 131I12*Any_Priority{integer}
 132I12*Priority{131I12}
-133I12*Interrupt_Priority{131I12} 20|67r57
-135i4*Default_Priority{132I12} 20|95r22 178r22
-X 46 s-bcprmu.ads
+133I12*Interrupt_Priority{131I12} 20|74r57
+135i4*Default_Priority{132I12} 20|113r22 189r22 252r22
+X 44 s-bcprmu.ads
 39U14*Start_All_CPUs 40i<c,__gnat_start_slave_cpus>22
-X 52 s-bbtime.ads
+X 50 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
-X 56 s-interr.ads
+X 54 s-interr.ads
 61I9*Ada_Interrupt_ID<integer>
 101U14*Install_Restricted_Handlers_Sequential 102i<c,__gnat_attach_all_handlers>22
-X 67 s-taskin.ads
-361V13*Get_Sec_Stack{41|95M9} 362i<c,__gnat_get_secondary_stack>22
-X 71 s-tarest.ads
+X 65 s-taskin.ads
+361V13*Get_Sec_Stack{39|95M9} 362i<c,__gnat_get_secondary_stack>22
+X 69 s-tarest.ads
 225U14*Activate_All_Tasks_Sequential 226i<c,__gnat_activate_all_tasks>22
 

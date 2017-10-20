@@ -113,9 +113,6 @@ package ada_main is
    --  stm32f4.interrupts_and_events%s
    --  stm32f4.interrupts_and_events.ops%s
    --  stm32f4.interrupts_and_events.ops%b
-   --  stm32f4.random_number_generator%s
-   --  stm32f4.random_number_generator.ops%s
-   --  stm32f4.random_number_generator.ops%b
    --  stm32f4.reset_and_clock_control%s
    --  stm32f4.system_configuration_controller%s
    --  stm32f4.system_configuration_controller.ops%s
@@ -123,8 +120,6 @@ package ada_main is
    --  stm32f4.timers%s
    --  stm32f4.reset_and_clock_control.ops%s
    --  stm32f4.reset_and_clock_control.ops%b
-   --  discovery_board.button%s
-   --  discovery_board.button%b
    --  led_handling%s
    --  led_handling%b
    --  discovery_board.led_interface%s

@@ -1,7 +1,7 @@
 V "GNAT Lib v2017"
 A -O2
 A -gnatA
-A --RTS=/usr/local/gnat-arm/arm-eabi/lib/gnat/ravenscar-sfp-stm32f4/
+A --RTS=C:\gnat\2017\arm-eabi\lib\gnat\ravenscar-sfp-stm32f4\
 A -mlittle-endian
 A -mfloat-abi=hard
 A -mcpu=cortex-m4
@@ -28,47 +28,45 @@ RV NO_IMPLEMENTATION_RESTRICTIONS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__generator.adb	099ec925 NE OO PK IL
+U ada_main%b		b__generator.adb	9fe501c6 NE OO PK IL
 W system%s		system.ads		system.ali
 
 U ada_main%s		b__generator.ads	a5c63b47 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
-D b__generator.ads	20171018082600 c323a782 ada_main%s
-D b__generator.adb	20171018082600 cabd6ea7 ada_main%b
-D system.ads		20170517144320 66e59cc5 system%s
+D b__generator.ads	20171020015538 c323a782 ada_main%s
+D b__generator.adb	20171020015538 5cc6a644 ada_main%b
+D system.ads		20170517220734 66e59cc5 system%s
 X 1 b__generator.ads
-5K9*ada_main 145l5 145e13 2|7b14 123l5 123t13
+5K9*ada_main 140l5 140e13 2|7b14 115l5 115t13
 8a4*GNAT_Version{string} 10r22
-12a4*Ada_Main_Program_Name{string} 13r22 2|81r52
-15U14*adainit 16i<c,adainit>22 2|27b14 75l8 75t15 85s7
-18U14*main 19i<c,main>22 2|80b14 87t7
+12a4*Ada_Main_Program_Name{string} 13r22 2|76r52
+15U14*adainit 16i<c,adainit>22 2|25b14 70l8 70t15 80s7
+18U14*main 19i<c,main>22 2|75b14 82t7
 X 2 b__generator.adb
-9i4 E005{short_integer} 9m46 9r46 47m7 47r15
-10i4 E079{short_integer} 10m46 10r46 49m7 49r15
-11i4 E102{short_integer} 11m46 11r46 51m7 51r15
-12i4 E096{short_integer} 12m46 12r46 53m7 53r15
-13i4 E075{short_integer} 13m46 13r46 55m7 55r15
-14i4 E112{short_integer} 14m46 14r46 56m7 56r15
-15i4 E118{short_integer} 15m46 15r46 57m7 57r15
-16i4 E115{short_integer} 16m46 16r46 58m7 58r15
-17i4 E082{short_integer} 17m46 17r46 59m7 59r15
-18i4 E109{short_integer} 18m46 18r46 61m7 61r15
-19i4 E073{short_integer} 19m46 19r46 62m7 62r15
-20i4 E086{short_integer} 20m46 20r46 64m7 64r15
-21i4 E121{short_integer} 21m46 21r46 65m7 65r15
-22i4 E107{short_integer} 22m46 22r46 67m7 67r15
-23i4 E067{short_integer} 23m46 23r46 69m7 69r15
-24i4 E089{short_integer} 24m46 24r46 71m7 71r15
-28i7*Main_Priority{integer} 29m25 29r25 43m7
-31U17*Install_Restricted_Handlers_Sequential 32b<c,__gnat_attach_all_handlers>24
-. 72s7
-34e7*Partition_Elaboration_Policy{character} 35m25 35r25 44m7
-37U17*Activate_All_Tasks_Sequential 38b<c,__gnat_activate_all_tasks>25 73s7
-40U17*Start_Slave_CPUs 41b<c,__gnat_start_slave_cpus>25 74s7
-77U14 Ada_Main_Program 78b<ada,_ada_generator>24 86s7
-81m7 Ensure_Reference{3|95M9} 82r24
+9i4 E005{short_integer} 9m46 9r46 45m7 45r15
+10i4 E079{short_integer} 10m46 10r46 47m7 47r15
+11i4 E102{short_integer} 11m46 11r46 49m7 49r15
+12i4 E096{short_integer} 12m46 12r46 51m7 51r15
+13i4 E075{short_integer} 13m46 13r46 53m7 53r15
+14i4 E110{short_integer} 14m46 14r46 54m7 54r15
+15i4 E113{short_integer} 15m46 15r46 55m7 55r15
+16i4 E082{short_integer} 16m46 16r46 56m7 56r15
+17i4 E073{short_integer} 17m46 17r46 57m7 57r15
+18i4 E086{short_integer} 18m46 18r46 59m7 59r15
+19i4 E116{short_integer} 19m46 19r46 60m7 60r15
+20i4 E107{short_integer} 20m46 20r46 62m7 62r15
+21i4 E067{short_integer} 21m46 21r46 64m7 64r15
+22i4 E089{short_integer} 22m46 22r46 66m7 66r15
+26i7*Main_Priority{integer} 27m25 27r25 41m7
+29U17*Install_Restricted_Handlers_Sequential 30b<c,__gnat_attach_all_handlers>24
+. 67s7
+32e7*Partition_Elaboration_Policy{character} 33m25 33r25 42m7
+35U17*Activate_All_Tasks_Sequential 36b<c,__gnat_activate_all_tasks>25 68s7
+38U17*Start_Slave_CPUs 39b<c,__gnat_start_slave_cpus>25 69s7
+72U14 Ada_Main_Program 73b<ada,_ada_generator>24 81s7
+76m7 Ensure_Reference{3|95M9} 77r24
 X 3 system.ads
-65K9*System 1|4w6 2|81r34 3|179e11
-95M9*Address 2|81r41
+65K9*System 1|4w6 2|76r34 3|179e11
+95M9*Address 2|76r41
 

@@ -10,17 +10,17 @@ with ANU_Base_Board.Config;                       use ANU_Base_Board.Config;
 with ANU_Base_Board.Com_Interface;                use ANU_Base_Board.Com_Interface;
 with ANU_Base_Board.LED_Interface;                use ANU_Base_Board.LED_Interface;
 with Discovery_Board;                             use Discovery_Board;
-with Discovery_Board.Button;                      use Discovery_Board.Button;
-with Discovery_Board.Config;                      use Discovery_Board.Config;
+-- with Discovery_Board.Button;                      use Discovery_Board.Button;
+-- with Discovery_Board.Config;                      use Discovery_Board.Config;
 with Discovery_Board.LED_Interface;               use Discovery_Board.LED_Interface;
 with STM32F4;                                     use type STM32F4.Bit, STM32F4.Bits_32;
 use STM32F4;
 with STM32F4.General_purpose_IOs;                 use STM32F4.General_purpose_IOs;
-with STM32F4.General_purpose_IOs.Ops;             use STM32F4.General_purpose_IOs.Ops;
+-- with STM32F4.General_purpose_IOs.Ops;             use STM32F4.General_purpose_IOs.Ops;
 with STM32F4.Interrupts_and_Events;               use STM32F4.Interrupts_and_Events;
 with STM32F4.Interrupts_and_Events.Ops;           use STM32F4.Interrupts_and_Events.Ops;
 with STM32F4.System_configuration_controller.Ops; use STM32F4.System_configuration_controller.Ops;
-with STM32F4.Random_number_generator.Ops;         use STM32F4.Random_number_generator.Ops;
+-- with STM32F4.Random_number_generator.Ops;         use STM32F4.Random_number_generator.Ops;
 with STM32F4.Reset_and_clock_control.Ops;         use STM32F4.Reset_and_clock_control.Ops;
 with System;                                      use System;
 
@@ -28,7 +28,8 @@ package body Generator_Controllers is
 
    -- Parameters about the sine wave.
    Signal_Frequency : constant Integer := 2;
-   Sample_Frequency : constant Integer := 16;
+   Sample_Frequency : constant Integer := 64;
+   Send_Value : constant Float := 0.8;
 
    -- Constants.
    PI : constant Float := 3.1415;
@@ -50,15 +51,21 @@ package body Generator_Controllers is
 
    -- Signal parameters.
    System_Start : constant Time := Clock;
-   Sine_Single_Period_Value : constant Integer := 1000 / Signal_Frequency;
-   Sine_Single_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value);
+   Sync_Available_Offset : constant Integer := 500000;
+   Sync_Offset_Period : constant Time_Span := Nanoseconds (Sync_Available_Offset);
+   Sine_Single_Period_Value : constant Integer := 1000000000 / Signal_Frequency;
+   Sine_Single_Period : constant Time_Span := Nanoseconds (Sine_Single_Period_Value);
    Half_Single_Period : constant Time_Span := Sine_Single_Period / 2;
-   Calc_Signal_Period : constant Time_Span := Milliseconds (Sine_Single_Period_Value / Sample_Frequency);
+   Calc_Signal_Slide : constant Integer := Sine_Single_Period_Value / Sample_Frequency;
+   Calc_Signal_Period : constant Time_Span := Nanoseconds (Calc_Signal_Slide);
    Current_Cycle_Start : Time := System_Start;
    Next_Cycle_Should_Start : Time := System_Start;
    Next_Cycle_Start : Time := System_Start;
 
+   Sine_Cycle_Start : Suspension_Object;
+
    Com_Ports_Semaphore : array (Com_Ports) of Suspension_Object;
+   Com_Ports_Falling : array (Com_Ports) of Time_Span;
 
    -- LED_Pattern : constant array (Com_Ports) of Discovery_Board.LEDs  := (Orange, Red, Blue, Green);
 
@@ -90,24 +97,64 @@ package body Generator_Controllers is
    end Com_Port_Reader;
 
    -- Port receiver.
+   procedure Com_Port_Receive_Data (Com_Port_Id : Com_Ports) is
+      Received_Value : constant Float := Float (To_Duration (Com_Ports_Falling (Com_Port_Id))) / Float (To_Duration (Sine_Single_Period));
+   begin
+      -- The Com_Port_Value is the thing actual value. Play with the value as you want.
+      if Received_Value > 0.5 then
+         On (Orange);
+      else
+         Off (Orange);
+      end if;
+   end Com_Port_Receive_Data;
+
    task type Com_Port_Receiver (Com_Port_Id : Com_Ports) with
      Storage_Size => 4 * 1024,
      Priority     => Default_Priority;
 
    task body Com_Port_Receiver is
+      Arrived_Time : Time;
       Arrived_Cycle_Time : Time_Span;
    begin
       loop
          -- Wait for the first signal.
          Suspend_Until_True (S => Com_Ports_Semaphore (Com_Port_Id));
-         -- Toggle.
-         On ((Com_Port_Id, L));
-         -- Calculate the arrived period time.
-         Arrived_Cycle_Time := Clock - Current_Cycle_Start;
-         -- Update the offset time.
-         if Arrived_Cycle_Time < Half_Single_Period then
-            -- Only offset the one after current.
-            Next_Cycle_Start := Next_Cycle_Should_Start + Arrived_Cycle_Time;
+         -- Save the arrive time ASAP.
+         Arrived_Time := Clock;
+         -- Check the data is raising or failling.
+         if Read (Com_Port_Id) = 1 then
+            -- Raising.
+            -- Toggle.
+            Toggle ((Com_Port_Id, L));
+            Toggle (Red);
+            -- Calculate the arrived period time.
+            Arrived_Cycle_Time := Arrived_Time - Current_Cycle_Start;
+            -- Update the offset time.
+            if Arrived_Cycle_Time < Half_Single_Period then
+               -- Only offset the one after current.
+               Next_Cycle_Start := Next_Cycle_Should_Start + Arrived_Cycle_Time;
+               if Arrived_Cycle_Time < Sync_Offset_Period then
+                  -- Treat these two waves are synced.
+                  On (Green);
+                  -- Process the data.
+                  Com_Port_Receive_Data (Com_Port_Id);
+               else
+                  Off (Green);
+               end if;
+            else
+               if Sine_Single_Period - Arrived_Cycle_Time < Sync_Offset_Period then
+                  -- Treat these two waves are synced.
+                  On (Green);
+                  -- Process the data.
+                  Com_Port_Receive_Data (Com_Port_Id);
+               else
+                  Off (Green);
+               end if;
+            end if;
+         else
+            -- Falling.
+            -- Save the falling period.
+            Com_Ports_Falling (Com_Port_Id) := Arrived_Time - Current_Cycle_Start;
          end if;
       end loop;
    end Com_Port_Receiver;
@@ -119,22 +166,43 @@ package body Generator_Controllers is
    Com_Port_Receiver_Four  : Com_Port_Receiver (4);
 
    -- *********** Sender ***********
-   procedure Com_Port_Sender (Is_Zero : Boolean) is
+   procedure Send_Data (Is_One : Boolean) is
    begin
       -- Simply check the data we need to send, enable and disable all the ports.
-      if Is_Zero then
-         -- Disable all the ports.
-         for Port in Com_Ports'First .. Com_Ports'Last loop
-            Reset  (Port);
-            Off ((Port, R));
-         end loop;
-      else
+      if Is_One then
          -- Enable all the ports.
          for Port in Com_Ports'First .. Com_Ports'Last loop
             Set  (Port);
             On ((Port, R));
          end loop;
+      else
+         -- Disable all the ports.
+         for Port in Com_Ports'First .. Com_Ports'Last loop
+            Reset  (Port);
+            Off ((Port, R));
+         end loop;
       end if;
+   end Send_Data;
+
+   task Com_Port_Sender with
+     Storage_Size => 4 * 1024,
+     Priority     => Default_Priority;
+
+   task body Com_Port_Sender is
+      Data_Value_One_Time : Time;
+   begin
+      loop
+         -- Wait for the cycle start.
+         Suspend_Until_True (S => Sine_Cycle_Start);
+         -- Calculate the data value period.
+         Data_Value_One_Time := Current_Cycle_Start + Nanoseconds (Integer (Float (Sine_Single_Period_Value) * Send_Value));
+         -- Send 1.
+         Send_Data (True);
+         -- Delay to the data value period.
+         delay until Data_Value_One_Time;
+         -- Send 0.
+         Send_Data (False);
+      end loop;
    end Com_Port_Sender;
 
    -- *********** Generator ***********
@@ -173,18 +241,29 @@ package body Generator_Controllers is
    end Sine;
 
    -- Generator task
+   procedure Dsd_Encode (Raw_Data : Float; Sample_Start : Time; Zero_Start : out Time) is
+      Duty_Ratio : constant Float := (Raw_Data + 1.0) * 0.5;
+   begin
+      Zero_Start := Sample_Start + Nanoseconds (Integer (Float (Calc_Signal_Slide) * Duty_Ratio));
+   end Dsd_Encode;
+
    task Signal_Generator with
      Storage_Size => 4 * 1024,
      Priority     => Default_Priority;
 
    task body Signal_Generator is
+      Current_Sample_Start : Time := System_Start;
       Next_Sample_Start : Time := System_Start;
+      Zero_Sample_Start : Time := System_Start;
       Sine_Sample : Float := 0.0;
       Sine_X : Float := 0.0;
    begin
       loop
+         Toggle (Red);
          -- Update the current cycle start time.
          Current_Cycle_Start := Clock;
+         -- Update the cycle start semaphore.
+         Set_True (Sine_Cycle_Start);
          -- Calculate the suppose start time.
          Next_Cycle_Should_Start := Current_Cycle_Start + Sine_Single_Period;
          -- Update the start time.
@@ -192,17 +271,23 @@ package body Generator_Controllers is
          -- Reset the sine x.
          Sine_X := 0.0;
          -- Initial the next sample start time.
-         Next_Sample_Start := Current_Cycle_Start;
+         Current_Sample_Start := Current_Cycle_Start;
          -- Sample.
          for Detect_Time in Sample_Range loop
-            Next_Sample_Start := Next_Sample_Start + Calc_Signal_Period;
+            -- Calculate next sample.
+            Next_Sample_Start := Current_Sample_Start + Calc_Signal_Period;
             -- Calculate the sample.
             Sine_Sample := Sine (Sine_X);
             Sine_X := Sine_X + Sample_X_Slide;
-            -- Send the data.
-            Com_Port_Sender (Sine_Sample < 0.0);
+            -- Update the light.
+            Dsd_Encode (Sine_Sample, Current_Sample_Start, Zero_Sample_Start);
+            On (Blue);
+            delay until Zero_Sample_Start;
+            Off (Blue);
             -- Time limitation for one single sample.
             delay until Next_Sample_Start;
+            -- Update current sample.
+            Current_Sample_Start := Next_Sample_Start;
          end loop;
          -- Wait to the suppose time.
          delay until Next_Cycle_Should_Start;
@@ -223,7 +308,7 @@ begin
                                Port => Com_Port_Pin.Port);
          Set_Trigger (Line    => Com_Port_Pin.Pin,
                       Raising => Enable,
-                      Falling => Disable);
+                      Falling => Enable);
          Masking (Line => Com_Port_Pin.Pin,
                   State => Unmasked);
       end loop;
